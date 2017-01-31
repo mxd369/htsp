@@ -1,0 +1,60 @@
+X. Function Design Recipe (basic steps)
+
+Note: When stuck, point to the step where stuck.
+---
+1. From Problem Analysis to Data Definitions
+  Identify the information that must be represented and how it is represented in the chosen programming language. Formulate data definitions and illustrate them with examples.
+
+Note: For the chosen data representation in step 1, writing down examples proves how real-world information is encoded as data and how data is interpreted as information.
+---
+2. Signature, Purpose Statement, Header
+  State which data the desired function consumes and produces. Articulate what the function computes as a concise one-line statement. Define a stub that lives up to the signature.
+---
+3. Functional Examples
+  Work through examples that illustrate the function’s purpose.
+
+Note: Step 3 says that a problem-solver must work through concrete scenarios to gain an understanding of what the desired function is expected to compute for specific examples.
+---
+4. Function Template
+  Translate the data definitions into an outline of the function.
+
+Note: Write down these questions in own words
+---
+5. Function Definition
+  Fill in the gaps in the function template. Exploit the purpose statement and the examples.
+
+Note: Step 5, when it is time to define the function. write down these questions in own words.
+---
+6. Testing
+  Articulate the examples as tests and ensure that the function passes all. Doing so discovers mistakes and also helps others read and understand the definition when the need arises—and it will arise for any serious program.
+
+Note: Step 6 demands that examples are turned into automated test code, which ensures that the function works properly for some cases. Running the function on real-world data may reveal other discrepancies between expectations and results.
+---
+Difference Between Programming and Program Design
+
+Note: The novelty of this approach is the creation of intermediate products for beginner-level programs. When a novice is stuck, inspect the existing intermediate products. The inspection is likely to use the generic questions from the design process and thus drive the novice to correct himself or herself. And this self-empowering process is the key difference between programming and program design.
+
+---
+
+Iterative Refinement: addresses the issue that problems are complex and multi-faceted. Getting everything right at once is nearly impossible. Instead, computer scientists borrow iterative refinement from the physical sciences to tackle this design problem. In essence, iterative refinement recommends stripping away all inessential details at first and finding a solution for the remaining core problem. A refinement step adds in one of these omitted details and re-solves the expanded problem, using the existing solution as much as possible. A repetition, also called an iteration, of these refinement steps eventually leads to a complete solution.
+
+In this sense a programmer is a mini-scientist. Scientists create approximate models for some idealized version of the world to make predictions about it. As long as the model’s predictions come true, everything is fine; when the predicted events differ from the actual ones, scientists revise their models to reduce the discrepancy. In a similar vein, when programmers are given a task, they create a first design, turn it into code, evaluate it with actual users, and iteratively refine the design until the program’s behavior closely matches the desired product.
+
+------ Improve Learning
+
+Learning to design programs also means acquiring two kinds of universally useful skills. Program design certainly teaches the same analytical skills as mathematics, especially (pre)algebra and geometry. But, unlike mathematics, working with programs is an active approach to learning. Creating software provides immediate feedback and thus leads to exploration, experimentation, and self-evaluation. The results tend to be interactive products, which vastly increases the sense of accomplishment when compared to drill exercises in text books.
+
+In addition to enhancing a student’s mathematical skills, program design teaches analytical reading and writing skills. Even the smallest design tasks are formulated as word problems. Without solid reading skills, it is impossible to design programs that solve a reasonably complex problem. Conversely, program design methods force a creator to articulate his or her thoughts in proper and precise language. Indeed, if students truly absorb the design recipe, they enhance articulation skills more than anything else.
+
+According to this process description, a designer must:
+1. analyze a problem statement, typically stated as a word problem;
+
+2. extract and express its essence, abstractly and with examples;
+
+3. make outlines and plans based on this analysis;
+
+4. evaluate results with respect to expected outcomes; and
+
+5. revise the product in light of failed checks and tests.
+
+Each step requires analysis, precision, description, focus, and attention to details. Any experienced entrepreneur, engineer, journalist, lawyer, scientist, or any other professional can explain how many of these skills are necessary for his or her daily work. 
