@@ -1,0 +1,38 @@
+htdp2e:
+  Inputs and Outputs
+  http://www.ccs.neu.edu/home/matthias/HtDP2e/part_prologue.html
+
+
+emc++:
+  not yet started
+
+
+ppp2uc++e:
+  not yet started
+
+
+spdx:
+  not yet started
+
+
+c++primer_plus:
+  location brain/Cplusplus_Primer_Plus
+  not yet started
+
+
+Proofs:
+
+Algorithms:
+
+Discrete:
+
+Data structures:
+
+Design patterns:
+
+Shell Scripting:
+https://www.youtube.com/watch?v=hwrnmQumtPw
+https://www.youtube.com/watch?v=nVt3Rst-2H8&list=PL7B7FA4E693D8E790
+
+
+https://github.com/tov/ipd/tree/master/lectures
