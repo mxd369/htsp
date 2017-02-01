@@ -1,0 +1,17 @@
+michaeldang$ g++ -o chapE_4e chapE_4e.cpp
+michaeldang$ ./chapE_4e
+----------------------------------
+ radius       volume of spheres   
+----------------------------------
+ r = 1	 4.18879
+ r = 2	 16.7551
+ r = 3	 37.6991
+ r = 4	 67.0206
+ r = 5	 104.72
+ r = 6	 150.796
+ r = 7	 205.251
+ r = 8	 268.082
+ r = 9	 339.292
+ r = 10	 418.879
+sh: pause: command not found
+michaeldang$ 
