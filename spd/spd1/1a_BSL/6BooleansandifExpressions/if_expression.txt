@@ -1,0 +1,31 @@
+How can we fix the following error?
+
+(if (< (image-width I1)
+       (image-width I2)
+	   I1
+	   I2))
+
+(if (< (image-width I1)
+       (image-width I2))
+	   I1
+	   I2))
+
+Add ')' after (image-width I2) Add ')' after <tt>(image-width I2)</tt> - correct
+
+EXPLANATION
+
+We know that if expressions have three parts: the question, the true answer and the false answer. Reading what we have here it looks like I1 and I2 are intended to be the true and false answers. So the < needs to be the question. We have to add a close paren after the second operand to <. Note that after we do that we should push CMD-I or CTL-I to fix the indentation of this code.
+
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================

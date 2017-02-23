@@ -1,0 +1,10 @@
+Expression:
+(* (-4 2) 3)
+
+Call to primitives:
+(* (-4 2) 3)
+(- 4 2)
+
+EXPLANATION
+
+(* (- 4 2) 3) and (- 4 2) are primitive calls because they are expressions that start with open parenthesis and the name of a primitive operation.

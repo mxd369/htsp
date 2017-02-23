@@ -1,0 +1,9 @@
+Computing
+
+A program consumes input and produces output. The inputs and outputs a program consumes and produces are called data.
+
+A simple addition program consumes numbers and produces their sum.
+
+In mathematics, the program, or function, is called an operator, and the inputs are called operands.
+
+The group of an operator and its operands is called an expression. The output is called the value of the expression.

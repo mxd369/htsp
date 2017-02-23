@@ -1,0 +1,37 @@
+Racket Expressions
+
+Creating expressions in Racket is very much like creating circles of evaluation
+
+The simplest Racket expressions are simple data, like numbers.
+
+3
+
+(+ 3 4)
+
+
+Just as with circles of evaluation, we can form complex expressions by building them from smaller expressions (called subexpressions).
+Here are Racket expressions for:
+3+4*5
+(2+3)*6
+(4+5)/(7-3)
+Racket expressions:
+(+ 3 (* 4 5))
+(* (+ 2 3) 6)
+(/ (+ 4 5) (- 7 3))
+
+
+Example - The Quadratic Formula
+
+negative b, plus or minus square-root, b squared minus four a c, all over two a
+
+(/ (sqrt (- (sqr b) (* 4 a c)))
+   (* 2 a))
+
+
+Breaking up long expressions:
+(+ (* 3 (+ (* 2 4) (+ 3  5))) (+ (- 10 7) 6))
+into:
+(+ (* 3
+      (+ (* 2 4)
+	     (+ 3 5)))
+   (+ (- 10 7)6))

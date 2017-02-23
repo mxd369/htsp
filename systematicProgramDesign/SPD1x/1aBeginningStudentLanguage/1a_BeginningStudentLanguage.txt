@@ -1,0 +1,545 @@
+Beginning Student Language
+=======================================
+Expressions
+
+argument
+comment
+evaluate
+expression
+number
+operand
+operator
+primitive
+value
+
+pythagorean theorem
+(sqrt (+ (sqr 3) (sqr 4)))
+
+
+Expressions
+(+ 2 3)
+(sqrt 2)
+#i1.4142135623730951
+1
+
+Values
+#i1.4142135623730951
+1
+
+What would be the result of evaluating the following expression:
+(/ (* 2 3) (- 3 1))
+3
+
+
+Recall that the average of a set of numbers is the sum of the numbers divided by how many numbers there are.
+Which of these expressions produces the average of the numbers 4, 6.2 and -12? Check ALL that are correct.
+(/ (+ -8 6.2) 3)
+(/ (+ 4 6.2 -12) 3)
+-0.6
+
+Why are we using Beginning Student Language in this course? Select all answers that apply.
+1
+It is simple to learn, allowing you to focus your attention on the design methods 
+2
+It forms the core of many other languages, which will help you transfer what you learn to other languages  There are so many popular programming languages that no single language will be useful for many projects
+3
+It is simple to learn, allowing you to focus your attention on the design methods, It forms the core of many other languages, which will help you transfer what you learn to other languages
+4
+There are so many popular programming languages that no single language will be useful for many projects, - correct
+=======================================
+Evaluation
+
+
+Consider the following expression:
+(* (- 4 2) 3)
+
+Select all calls to primitives.
+(* (- 4 2) 3) and (- 4 2) are primitive calls because they are expressions that start with open parenthesis and the name of a primitive operation.
+
+
+Select all operators.
+* is the operator in the primitive call (* (- 4 2) 3), and - is the operator in the primitive call (- 4 2).
+
+
+Select all operands.
+Operands are all expressions that follow the primitive operator. So (- 4 2), 3 are operands to *, and 4, 2 are operands to -.
+
+
+What is the next step in the following evaluation?
+Step 0: (/ (* 3 4) (+ (- 7 4) 3))
+Step 1: (/ 12 (+ (- 7 4) 3)) 
+Step 2: (/ 12 (+ 3 3))
+
+
+What is the next step in the following evaluation?
+Step 0: (/ (* 3 4) (+ (- 7 4) 3))
+Step 1: (/ 12 (+ (- 7 4) 3))
+Step 2: (/ 12 (+ 3 3))
+Step 3: (/ 12 6)
+
+What is the next step in the following evaluation?
+Step 0: (/ (* 3 4) (+ (- 7 4) 3))
+Step 1: (/ 12 (+ (- 7 4) 3))
+Step 2: (/ 12 (+ 3 3))
+Step 3: (/ 12 6)
+Step 4: 2
+
+
+=======================================
+Strings and Images
+
+String
+
+Image
+
+String
+A String is a kind of primitive data that consists of symbols “strung” together. Strings are always enclosed in double quotation marks “like this”. It is important to note that if numbers are written inside strings, they are strings not numbers. “123” does not have the value of one hundred twenty three, since it is a String, whereas 123 does have the value of one hundred twenty three, since it is a Number. [See Strings and Images.]
+
+Image
+Image is a primitive type of data that represents image, such as the result of a built in image function or a copy-pasted picture. [See Strings and Images.]
+
+
+What is the value of the expression below?
+(substring "hello" 1 3)
+'el'
+
+Will the following produce any errors?
+(string-append "1" "2")
+no
+
+
+Which primitive is required in the following expression to produce the stop sign image below?
+
+(_______ (text "STOP" 48 "white") 
+         (regular-polygon 60 8 "solid" "red"))
+overlay
+
+
+(beside (square 20 "outline" "blue")
+        (above (circle 15 "solid" "red")
+               (triangle 20 "solid" "green")))
+
+(above (square 10 "solid" "red")
+       (square 5 "solid" "blue"))
+We didn't include (require 2htdp/image) at the beginning of the program.
+
+
+We have revised the program now, why are we still getting an error?
+We misspelled the name of the required module, so we need to replace "2htpd" with "2htdp"
+
+
+=======================================
+Constant Definitions
+constant definitions, forming constant definitions and rules for evaluating constants.
+
+Constant
+A constant is named value defined using define. It is called a constant because once it is defined it never changes.
+
+Consider the following program:
+
+(define FOO (* 2 3))
+(define BAR (* FOO 2))
+
+(* FOO BAR)
+What result is produced when the program is run? (The best way to figure this out would be to work through the evaluation rules you know one at a time until you have the final result.)
+FOO = 6
+BAR = 12
+FOO * BAR = 72
+
+
+
+Given the following program:
+
+(define FOO (* 2 3))
+(define BAR (* FOO 2))
+
+(* FOO BAR)
+
+What is the result of the first evaluation step?
+(define FOO 6)
+(define BAR (* FOO 2))
+(* FOO BAR)
+
+
+=======================================
+Function Definitions
+Function
+Functions in programs are very similar to functions in mathematics. In math, a function f(x) can be passed a value for x, and it will produce a result based on that value. Functions in programs act the same way. They have a name (in the math example this name was "f ") and one or more parameters (in the math example, the parameter was "x"). Functions also have a body, which is an expression that is evaluated to produce the resulting value of the function.
+
+
+function-definitions-starter.rkt
+(require 2htdp/image)
+
+;; function-definitions-starter.rkt
+
+(above (circle 40 "solid" "red")         
+       (circle 40 "solid" "yellow")
+       (circle 40 "solid" "green"))
+
+
+Remember functions from grade school math?
+Given: f(x) = 2*x
+f(2) = 2*2 = 4
+f(6) = 2*6 = 12
+
+x: parameter stands for varying values 
+function can be used repeatedly with any valye each time
+
+
+concise version with function
+(require 2htdp/image)
+
+;; function-definitions-starter.rkt
+
+;(above (circle 40 "solid" "red")         
+;       (circle 40 "solid" "yellow")
+;       (circle 40 "solid" "green"))
+
+(define (bulb c)
+  (circle 40 "solid" c))
+
+(above (bulb "red")
+       (bulb "yellow")
+       (bulb "green"))
+
+
+Why should you use function definitions?
+ To be lazy
+ To make the code easier to read
+ To avoid duplicated code
+
+
+Suppose we want a function that will give the length of the hypotenuse of any right angle triangle. Which of the following would achieve that?
+Remember that the expression we used when the side lengths were 3 and 4 was:
+(sqrt (+ (sqr 3) (sqr 4)))
+
+(define (pythag a b)
+  (sqrt (+ (sqr a) (sqr b))))
+
+
+
+What should we do to fix the following error:
+(define (bar img)
+  (* (image-width i) 2))
+
+i: this variable is not defined
+Replace i with img, which is the name of the parameter for this function 
+
+
+To form a function definition:
+(define (<name> <name>...)
+  <expression>)
+function-name  parameter  body 
+
+(define (bulb c)
+  (circle 40 "solid" c))
+
+
+To form a function call expression:
+(<name-of-defined-function> <expression>...)
+(bulb (string-append "re" "d"))
+
+
+To evaluate primitive call
+ - first reduce operands to values (called the arguments)
+ - then apply primitive to the values
+
+For function definitions
+ - simply record definition
+
+To evaluate function call
+ - first reduce operands to values (called the arguments)
+ - replace function call by
+   - body of function in which every occurrence of parameter(s) are replaced by corresponding argument
+
+   
+(require 2htdp/image)
+
+;; function-definitions-starter.rkt
+
+;(above (circle 40 "solid" "red")         
+;       (circle 40 "solid" "yellow")
+;       (circle 40 "solid" "green"))
+
+(define (bulb c)
+  (circle 40 "solid" c))
+
+;(above (bulb "red")
+;       (bulb "yellow")
+;       (bulb "green"))
+
+(bulb (string-append "re" "d"))
+(bulb "red")
+(circle 40 "solid" "red")
+.
+
+practical terms
+functions, strings, images, numbers, we want all of that(functions are central)
+
+
+Given the function:
+(define (foo a b)
+  (+ (* 3 a)
+     b
+    (* b a)))
+What is the first step of the evaluation of (foo (+ 1 1) 4), and what is the result of that step?
+ Evaluate (+ 1 1) and replace it in the function call of foo.
+(foo 2 4)
+EXPLANATION
+Because (+ 1 1) is an expression, not a value, it is first evaluated to 2 before moving on with the evaluation of foo.
+
+
+After the previous step of the evaluation we are left with:
+(foo (+ 1 1) 4) => (foo 2 4)
+Replace (foo 2 4) with the body of foo in which we replace all occurrences of a with 2, and b with 4.
+
+(+ (* 3 2)
+   4
+   (* 4 2))
+EXPLANATION
+According to the rules for evaluating function calls, the first step is to replace the function call by the body of the function in which every occurrence of the parameters a and b are replaced by the corresponding arguments 2 and 4.
+
+
+After the previous step of the evaluation we are left with:
+(foo (+ 1 1) 4) =>
+(foo 2 4)       =>
+(+ (* 3 2)
+   4
+   (* 4 2))     =>
+What is the next step of the evaluation and what does that leave us with? 
+(* 3 2) is replaced with 6.
+(+ 6
+   4
+   (* 4 2))
+EXPLANATION
+We now simply evaluate the expression (+ (* 3 2) 4 (* 4 2)) in left to right, inside to outside order, so (* 3 2) evaluates to 6.
+
+
+After the previous step of the evaluation we are left with:
+(foo (+ 1 1) 4) =>
+(foo 2 4)       =>
+(+ (* 3 2)
+    4
+	(* 4 2))    =>
+(+ 6
+   4
+   (* 4 2))     =>
+What is the next step of the evaluation and what does that leave us with?
+(* 4 2) is replaced with 8.
+(+ 6
+   4
+   8)
+EXPLANATION
+Next, the expression (* 4 2) evaluates to 8.
+
+
+After the previous step of the evaluation we are left with:
+(foo (+ 1 1) 4)  =>
+(foo 2 4)        =>
+(+ (* 3 2)
+    4
+	(* 4 2))     =>
+(+ 6
+   4
+   (* 4 2))      =>
+(+ 6
+   4
+   8)            =>
+What is the next step of the evaluation and what does that leave us with?
+6, 4, and 8 are added to produce 18.
+18
+EXPLANATION
+Finally, the expression (+ 6 4 8) evaluates to 18.
+
+
+All Rules
+https://courses.edx.org/courses/course-v1:UBCx+SPD1x+1T2016/a24b7341216346f2a5c99c6391f64229/
+
+
+=======================================
+Booleans and if Expressions
+This section introduces a new kind of primitive value called a Boolean. Booleans represent the answer to true/false questions. You will also learn about if expressions which allow us to make decisions based on the result of such questions.
+
+Boolean
+Boolean is a primitive type that is comprised of just two values: true and false.
+
+What is the value of the expression below?
+ (> 10 5)
+ true
+ EXPLANATION
+10 is greater than 5 so the answer is true. Remember boolean values are not strings and are case sensitive.
+
+
+What about this one?
+ (> 5 5)
+ false
+ EXPLANATION
+5 is not greater than 5 so the answer is false. Again, remember boolean values are not strings and are case sensitive. 
+
+Which of the following are predicates? Select all that apply.
+ =
+ string=?
+ EXPLANATION
+Predicates are primitives or functions that produce a boolean value, so = and string=? are examples of predicates.
+
+Predicate
+A function or primitive that produces a boolean value. [See Booleans and If Expressions.]
+
+
+Which of the following expressions produces true only when the width of an image IMG1 is greater than 50 pixels?
+EXPLANATION
+
+The expression that compares whether (image-width IMG1) is greater than 50 is:
+
+(> (image-width IMG1) 50)
+
+
+To form an if expression
+question
+(must produce boolean)
+true answer
+false answer
+
+
+To evaluate an if expression:
+-if the question is not a value evaluate it, and replace with value
+-if the question is true replace entire if expression with true answer expression
+-if the question is false replace entire if expression with false answer expression
+-the question is a value other than true or false so produce an error
+
+
+
+What is the value of the if expression below?
+(if (> (string-length "hello") 10)
+    "long"
+    "short")
+
+"short"
+EXPLANATION
+
+The question in the if expression is not a value, so we evaluate it and replace it with false. Since the question is false, we replace the entire if expression with the false-answer expression, which is just the value "short".
+
+
+and
+or
+not
+
+
+and
+syntax
+(and expression expression expression ...)
+Evaluates to true if all the expressions are true. If any expression is false, the and expression evaluates to false (and the expressions to the right of that expression are not evaluated.)
+If any of the expressions evaluate to a value other than true or false, and reports an error.
+
+or
+(or expression expression expression ...)
+Evaluates to true as soon as one of the expressions is true (and the expressions to the right of that expression are not evaluated.) If all of the expressions are false, the or expression evaluates to false.
+If any of the expressions evaluate to a value other than true or false, or reports an error.
+
+
+not (procedure)
+(not x) → boolean?
+  x : boolean?
+Negates a boolean value.
+> (not false)
+#true
+
+
+What is the value of the expression below?
+
+(or (< 2 1) 
+    (> 3 2)
+    (= 4 4))
+ true
+According to the help desk,
+http://docs.racket-lang.org/htdp-langs/beginner.html?q=or#%28form._%28%28lib._lang%2Fhtdp-beginner..rkt%29._or%29%29
+an or expression: (or <expr1> <expr2> …) evaluates to true as soon as one <exprn> evaluates to true.
+ 
+
+
+
+Which comparisons are performed when the expression below is evaluated?
+(or (< 2 1) 
+    (> 3 2)
+    (= 4 4))
+The < and the > 
+EXPLANATION
+The help desk also explains that as soon as an expression produces true, in this case the expression is (> 3 2), other expressions to the right of it are not evaluated and or immediately produces true.
+
+
+Given:
+
+(define B1 true)
+(define B2 false)
+What is the value of the expression below?
+(or (not B1) B2)
+false
+EXPLANATION
+(not B1) is false. (or false false) is false.
+
+
+=======================================
+Using the Stepper
+
+
+Click the mouse to move the green dot on top of one example of an operator.
++ *
+EXPLANATION
+
+Operators are primitives built into BSL that consume primitive data and produce results. Examples include +, *, -, / and many more.
+
+
+Identify one example of a function name.
+foo
+EXPLANATION
+
+Recall:
+example function definition:
+(define (<function name> <parameter's'>...)
+  <expression'body'>)
+ 
+ example function call:
+ (<name-of-defined-function'function name'> <expression'operands')...)
+ 
+ 
+example of a function body. 
+(define (<function name> <parameter's'>...)
+  <expression'body'>)
+
+
+
+example of a parameter.
+x is the parameter
+ex. (define (add2 x)
+       (+ 2 x))
+
+=======================================
+Discovering Primatives
+
+how you can use the DrRacket help desk to discover new primitives. This is an important skill because in any language programmers are always having to learn new primitives and new features. The teaching languages have many hundreds of useful primitives, other languages have thousands, so no one can ever remember them all, instead they have to look them up when needed.
+
+1
+Make a lucky guess, guess the name of a primitive
+right click
+search in help desk from..
+2
+search and scroll
+(/ 3 4)
+control click on divide(/)
+search in help desk /  (choose lang/htdp-beginner)
+
+
+What is the name of the primitive you would use to produce this image?
+radial-star
+EXPLANATION
+Here is the documentation for http://docs.racket-lang.org/teachpack/2htdpimage.html#%28def._%28%28lib._2htdp%2Fimage..rkt%29._radial-star%29%29
+
+
+What does the first argument for the primitive radial-star represent?
+point count
+The documentation for radial-star indicates that the first argument is point-count. Looking at an example might help too!
+
+=======================================
+Practice Problems
+=======================================
+Module Wrap-Up

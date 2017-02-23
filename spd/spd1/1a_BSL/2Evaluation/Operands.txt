@@ -1,0 +1,14 @@
+Expression:
+
+(* (- 4 2) 3)
+
+Select all operands.
+(- 4 2)
+3
+4
+2
+
+
+EXPLANATION
+
+Operands are all expressions that follow the primitive operator. So (- 4 2), 3 are operands to *, and 4, 2 are operands to -.

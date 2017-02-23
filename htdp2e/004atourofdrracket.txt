@@ -1,0 +1,3 @@
+Definition Window(Area): store computations,
+
+Interaction Window(Area): experimenting, quick calculations

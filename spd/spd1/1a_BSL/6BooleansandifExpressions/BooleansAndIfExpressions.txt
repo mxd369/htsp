@@ -1,0 +1,43 @@
+(> 10 5)
+;10 > 5
+True
+EXPLANATION
+
+10 is greater than 5 so the answer is true. Remember boolean values are not strings and are case sensitive.
+======================
+(> 5 5)
+False
+EXPLANATION
+
+5 is not greater than 5 so the answer is false. Again, remember boolean values are not strings and are case sensitive.
+======================
+Predicate
+A function or primitive that produces a boolean value.
+
+Which of the following are predicates? Select all that apply.
+=
+string=?
+
+EXPLANATION
+
+Predicates are primitives or functions that produce a boolean value, so = and string=? are examples of predicates.
+
+======================
+
+Which of the following expressions produces true only when the width of an image IMG1 is greater than 50 pixels?
+
+(> (image-width IMG1 50))  (> (image-width IMG1) 50) 
+
+EXPLANATION
+The expression that compares whether (image-width IMG1) is greater than 50 is:
+(> (image-width IMG1) 50)
+======================
+======================
+======================
+======================
+======================
+======================
+======================
+======================
+======================
+======================

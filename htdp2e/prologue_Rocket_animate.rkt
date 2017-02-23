@@ -1,0 +1,8 @@
+(require 2htdp/universe)
+(define (create-rocket-scene height)
+  (place-image . 50 height (empty-scene 100 100)))
+(create-rocket-scene 0)
+(create-rocket-scene 10)
+(create-rocket-scene 20)
+(create-rocket-scene 30)
+(animate create-rocket-scene)

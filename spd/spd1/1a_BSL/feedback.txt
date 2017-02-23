@@ -1,0 +1,82 @@
+
+GREGOR KICZALES: Hi, everybody.
+I just want to check in and give you some thoughts about what's
+going on in the course this week.
+This is always a really fun time in a MOOC
+when everybody gets on for the first time,
+and there's all the introductions, and you see where everybody's from,
+and what kinds of things they're hoping to get out of the course.
+And I've really been enjoying reading those introductions and all
+the other forums.
+Let me just talk about a couple of things on the forums.
+So one of the threads had to do with which of the three ways
+of computing average was in some sense the most clear.
+And most people thought it was number one.
+Some people pointed out that in some sense it didn't matter.
+The people who pointed out that in some sense it doesn't matter
+are technically right.
+Either way, or any of the ways, you get the same number when it's evaluated.
+But we like the first one best.
+And in fact, one of the notes that was posted from Craig McDonald--
+and in fact, Craig points out that the first choice
+is the one that most closely matches one of the themes for the course, which
+is learning how to write code that looks like the design.
+If you didn't pick that one, if you picked the third one,
+that's fine too, or even the second one.
+Stick with this a bit, and we hope to convince you by the end of the class
+that really you'd prefer to write the first one too.
+And you could come back and debate that with us later on the course.
+So another thread that was fun was the thread
+having to do with all the images.
+And here I'm showing you some of the images that people uploaded.
+We weren't able to put all of them in here, but there's a lot of great ones,
+faces seemed to be particularly popular every time.
+And if you haven't had a chance to create your own image yet,
+maybe you can use this set of examples as inspiration over the weekend for you
+to do one of your own.
+Finally just to note about the wrap up.
+We enjoy reading the comments in the wrap
+up and especially the suggestions for how we can improve things.
+A couple of people asked for more problems to do.
+And I just want to point out that if you go to the top of the screen,
+there's a tab that says problem bank that has a lot more problems in it.
+All the ones labeled BSL at the beginning
+are good candidates for this week.
+And a couple people commented on maybe the course was going a bit too slowly
+because they already had programming experience.
+And we're aware of this.
+I know that if you have programming experience,
+the first week is a bit too slow.
+Let me just say two things.
+One is please take the time many anyways to learn the BSL language.
+You'll need it going forward.
+And the other is the course really is designed
+to be accessible to beginners as well as more experienced programmers.
+For the beginners, we need to take some time for them
+to learn BSL and get that under their feet.
+Starting in week two, we'll get to the design method,
+and that'll be new material for everybody.
+And the course should pick up some speed for everybody
+without going too fast for anyone.
+One last thought I want to share about demographics.
+If you read the forums, it looks like there's
+a lot of people in this course who have a lot of programming experience.
+It might even look like most of the people in the course
+have a lot of programming experience.
+And of course, it's great for those people to be here,
+because the course is for beginners and people with experience.
+What you're looking at here is the data we've
+got so far from the poll in the wrap up module
+about the amount of programming experience people
+have coming into the course.
+And what you could see is the two categories on the left--
+the "this will be my first time" and "less than one year"--
+those add up to a significant fraction of the course.
+So there really is a mix of people in the course.
+And that's great.
+That's when it works the best.
+So again, thanks for joining the MOOC.
+Really glad you're here, and look forward
+to hearing more from you on the forums.
+Post questions there that I can answer either in the forum
+or in our regular weekly video like this one.

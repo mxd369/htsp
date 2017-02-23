@@ -1,0 +1,17 @@
+(define FOO (* 2 3))
+(define BAR (* FOO 2))
+
+(* FOO BAR)
+
+;72
+
+
+What is the value of the first step
+
+(define FOO 6)
+(define BAR (* FOO 2))
+(* FOO BAR)
+
+EXPLANATION
+
+When DrRacket sees a BSL constant definition it first evaluates the value expression to get the value for the constant.

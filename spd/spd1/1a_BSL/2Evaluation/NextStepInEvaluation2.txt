@@ -1,0 +1,18 @@
+What is the next step in the following evaluation?
+
+Step 0: (/ (* 3 4) (+ (- 7 4) 3))
+
+Step 1: (/ 12 (+ (- 7 4) 3))
+
+Step 2: (/ 12 (+ 3 3))
+
+Step 3: ______________
+
+(/ 12 6)
+
+
+ANSWER (/ 12 6)
+
+EXPLANATION:
+
+All of the operands to + have been evaluated, so + can be called with the arguments 3 and 3.

@@ -1,0 +1,171 @@
+The program file should be set to the Beginning Student Language
+and should have no require declarations.
+
+Safe                 U/A
+Commit Ready         P/F/G
+Design Completeness  P/F/G
+Internal Quality     P/F/G/E
+Problem Satisfied    P/F/G
+
+
+search the file for a require
+cmd + f
+  require
+
+
+Safe                 A
+Commit Ready         G
+Design Completeness  F
+Internal Quality     P/F/G/E
+Problem Satisfied    P/F/G
+
+- The file should be neat and tidy
+- No tests or code sould be commented out
+other than stubs and templates
+- All scratch work should be removed.
+- Indentation should be correct
+
+CMD-I 
+  to fix the indentation
+
+
+How to Desing Data (HtDD)
+  Type comment
+  Interpretation
+  Examples
+  Template
+  Template Rules Used
+  
+=====
+
+Uncomment the template
+;; Health is one of:
+;; - "dead"
+;; - Natural
+;; interp. "dead" means a dead player, a number represents the extra lives of the player
+(define H1 "dead")
+(define H2 3)
+
+#; <------------------------------(run) n: this variable is not defined
+(define (fn-for-health h)
+  (cond [(number? n) ..]
+        (else ..)))
+
+;;;; make the change, run it, and see if it passes: All 11 tests passed!
+(define (fn-for-health h)
+  (cond [(number? h) ..]
+        (else ..)))
+
+How to Desing Data (HtDD)
+  Type comment            Passed
+  Interpretation          Passed
+  Examples                Passed
+  Template <------------- Failed
+  Template Rules Used     Passed
+
+
+How to Desing Function (HtDF)
+    To design a single function
+  Signature, purpose, stub
+  Examples(wrapped in check-expect)
+  Inventory - template & constants
+  Cody Body
+  Test and debug
+
+=====Simplify
+(check-expect (increase-health 0) 1)
+(check-expect (increase-health "dead") "dead")
+(check-expect (increase-health 1) 2)
+
+#;
+(define (increase-health h) 0) ;stub
+
+#;
+(define (fn-for-health h) ; template
+  (cond [(number? n) ..]
+        (else ..)))
+
+(define (increase-health h)
+  (cond [(number? h) (add1 h)]
+        (else h)))
+
+=====to this
+(check-expect (increase-health 0) 1)
+(check-expect (increase-health "dead") "dead")
+(check-expect (increase-health 1) 2)
+
+#;
+(define (increase-health h) 0) ;stub
+
+;<took template from Health>
+
+(define (increase-health h)
+  (cond [(number? h) (add1 h)]
+        (else h)))
+
+How to Desing Data (HtDD)
+  Type comment            Passed
+  Interpretation          Passed
+  Examples                Passed
+  Template <------------- Failed
+  Template Rules Used     Passed
+
+
+Internal Quality
+  Does it capture the information it is supposed to?
+
+
+;; Health is one of:
+;; - "dead"   <----------- Distinct
+;; - Natural  <----------- Natural/Unbounded Interval
+;; interp. "dead" means a dead player, a number represents the extra lives of the player
+(define H1 "dead")
+(define H2 3)
+
+
+could use:
+  ;; Health is one of:
+  ;; - false
+  ;; - Natural
+
+  or
+
+  ;; Health is one of:
+  ;; - "not alive"
+  ;; - Natural
+
+
+;; interp. "dead" means a dead player, a number represents the extra lives of the player  <--- good, tells what dead and what number means
+
+in itemization, examples are needed
+
+the order of the subclasses is not the same as in the template
+
+
+;; Health is one of:
+;; - "dead"   <----------- Distinct
+;; - Natural  <----------- Natural/Unbounded Interval
+;; interp. "dead" means a dead player, a number represents the extra lives of the player
+(define H1 "dead")
+(define H2 3)
+
+!-------------------------------needs to be consistent
+#;
+(define (fn-for-health h) ; template
+  (cond [(number? n) ..]
+        (else ..)))
+=====^change to
+(define (increase-health h)
+  (cond [(string? h) (...)]
+        [else (... h)]))
+
+;; Template rules used:
+;; - one of: 2 cases
+;; - atomic non-distinct: Natural
+;; - atomic distinct: "dead"
+
+=====^change to
+;; Template rules used:
+;; - one of: 2 cases
+;; - atomic distinct: "dead"
+;; - atomic non-distinct: Natural

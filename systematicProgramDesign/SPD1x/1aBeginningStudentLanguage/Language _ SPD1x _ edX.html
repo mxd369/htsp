@@ -1,0 +1,933 @@
+
+
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XA4GVl5ACwAEV1JQAA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"1beac94c95","agent":"js-agent.newrelic.com/nr-768.min.js","transactionName":"NQQGYUZWDUNSVUMPWQxOIkBaVBdZXFgYBVkXExdQQ1YRVR1AXgNBEVsXQVVDClNsQlYE","applicationID":"3343327","errorBeacon":"bam.nr-data.net","applicationTime":836}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+  
+      <title>
+       Language | SPD1x | edX
+      </title>
+  
+
+      <script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+  <script type="text/javascript" src="/i18n.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://d37djvu3ytnwxt.cloudfront.net/static/images/favicon.c074c912999f.ico" />
+
+  
+  
+
+    <link href="https://d37djvu3ytnwxt.cloudfront.net/static/css/lms-style-vendor.614217745ba0.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+  <link rel="stylesheet" href="https://d37djvu3ytnwxt.cloudfront.net/static/css/lms-main.b054e0c11be1.css" type="text/css" media="all" />
+
+    
+    <script type="text/javascript" src="https://d37djvu3ytnwxt.cloudfront.net/static/js/lms-main_vendor.6efceadddba7.js" charset="utf-8"></script>
+
+
+    
+    <script type="text/javascript" src="https://d37djvu3ytnwxt.cloudfront.net/static/js/lms-application.4ded1a473dec.js" charset="utf-8"></script>
+
+
+
+  <script>
+    window.baseUrl = "https://d37djvu3ytnwxt.cloudfront.net/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="https://d37djvu3ytnwxt.cloudfront.net/static/lms/js/require-config.611274bbac52.js"></script>
+
+    
+    <script type="text/javascript" src="https://d37djvu3ytnwxt.cloudfront.net/static/js/lms-modules.66d1fd984b7b.js" charset="utf-8"></script>
+
+
+
+  
+
+  
+
+    <link href="https://d37djvu3ytnwxt.cloudfront.net/static/css/lms-style-course-vendor.d65f103108eb.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+
+    <link href="https://d37djvu3ytnwxt.cloudfront.net/static/css/lms-course.8453e6d85883.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+  
+
+  <script src=//cdn.optimizely.com/js/1743970571.js></script>
+
+  <!-- begin Segment -->
+<script type="text/javascript">
+  // Asynchronously load Segment's analytics.js library
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+  analytics.load("8fncv13bt5");
+  analytics.page();
+  }}();
+  // Note: user tracking moved to segment-io-footer.html
+</script>
+<!-- end Segment -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
+
+
+
+</head>
+
+<body class="ltr view-in-course view-statictab  lang_en">
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip" href="#content">Skip to main content</a>
+
+        
+
+
+
+
+
+
+
+
+
+<header class="global slim" aria-label="Main" role="banner">
+  <div class="wrapper-header nav-container">
+    <h1 class="logo" itemscope="" itemtype="http://schema.org/Organization">
+      <a href="https://www.edx.org" itemprop="url">
+        
+            <img src="https://d37djvu3ytnwxt.cloudfront.net/static/themes/edx.org/images/logo.517a627deaad.png" alt="edX Home Page" itemprop="logo" />
+        
+      </a>
+    </h1>
+
+    <h2 class="course-header">
+      <span class="provider">UBCx:</span>
+      <span class="course-number">SPD1x</span>
+      <span class="course-name">Systematic Program Design - Part 1</span>
+    </h2>
+
+
+    <ul class="user">
+      <li class="primary">
+        <a href="/dashboard" class="user-link">
+          <span class="sr">Dashboard for:</span>
+          <div>lifenhanceorg</div>
+        </a>
+      </li>
+      <li class="primary">
+        <a href="#" class="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr">More options dropdown</span> &#9662;</a>
+        <ul class="dropdown-menu" aria-label="More Options" role="menu">
+          
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/u/lifenhanceorg">Profile</a></li>
+            <li><a href="/account/settings">Account</a></li>
+          
+          <li><a href="/logout" role="menuitem">Sign Out</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+  </div>
+</header>
+<!--[if lte IE 9]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/chrome" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+
+
+
+
+
+<div class="help-tab">
+  <a href="#help-modal" rel="leanModal" role="button">Help</a>
+</div>
+
+<section id="help-modal" class="modal" aria-hidden="true" role="dialog" aria-label="edX Help">
+  <div class="inner-wrapper" id="help_wrapper">
+    <button class="close-modal "tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>
+	<span class="edx">edX</span> Help
+      </h2>
+      <hr>
+    </header>
+
+
+
+    <p>For <strong>questions on course lectures, homework, tools, or materials for this course</strong>, post in the <a href="/courses/course-v1:UBCx+SPD1x+1T2016/discussion/forum" target="_blank">course discussion forum</a>.
+    </p>
+
+    <p>Have <strong>general questions about edX</strong>? You can find lots of helpful information in the edX <a href="https://www.edx.org/student-faq" target="_blank">FAQ</a>.
+      </p>
+
+    <p>Have a <strong>question about something specific</strong>? You can contact the edX general support team directly:</p>
+    <hr>
+
+    <div class="help-buttons">
+      <a href="#" id="feedback_link_problem">Report a problem</a>
+      <a href="#" id="feedback_link_suggestion">Make a suggestion</a>
+      <a href="#" id="feedback_link_question">Ask a question</a>
+    </div>
+
+    <p class="note">Please note: The edX support team is English speaking. While we will do our best to address your inquiry in any language, our responses will be in English.</p>
+
+  </div>
+
+  <div class="inner-wrapper" id="feedback_form_wrapper">
+    <button class="close-modal">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header></header>
+
+    <form id="feedback_form" class="feedback_form" method="post" data-remote="true" action="/submit_feedback">
+      <div id="feedback_error" class="modal-form-error" tabindex="-1"></div>
+      <label data-field="subject" for="feedback_form_subject">Briefly describe your issue*</label>
+      <input name="subject" type="text" id="feedback_form_subject" aria-required="true">
+      <label data-field="details" for="feedback_form_details">Tell us the details*
+<span class="tip">Include error messages, steps which lead to the issue, etc</span></label>
+      <textarea name="details" id="feedback_form_details" aria-required="true"></textarea>
+      <input name="issue_type" type="hidden">
+      <input name="course_id" type="hidden" value="course-v1:UBCx+SPD1x+1T2016">
+      <div class="submit">
+        <input name="submit" type="submit" value="Submit" id="feedback_submit">
+      </div>
+    </form>
+  </div>
+
+  <div class="inner-wrapper" id="feedback_success_wrapper" tabindex="0">
+    <button class="close-modal" tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>Thank You!</h2>
+      <hr>
+    </header>
+
+    
+    <p>
+    Thank you for your inquiry or feedback.  We typically respond to a request within one business day (Monday to Friday, 14:00 UTC to 22:00 UTC.) In the meantime, please review our <a href="https://www.edx.org/student-faq" target="_blank" id="feedback-faq-link" tabindex="0">detailed FAQs</a> where most questions have already been answered.
+    </p>
+  </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var onModalClose = function() {
+            $("#help-modal .close-modal").off("click");
+            $("#lean_overlay").off("click");
+            $("#help-modal").attr("aria-hidden", "true");
+            $('area,input,select,textarea,button').removeAttr('tabindex');
+            $(".help-tab a").focus();
+        },
+        cycle_modal_tab = function(from_element_name, to_element_name) {
+            $(from_element_name).on('keydown', function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 9) {
+                    e.preventDefault();
+                    $(to_element_name).focus();
+                }
+            });
+        };
+
+    $(".help-tab").click(function() {
+        $(".field-error").removeClass("field-error");
+        $("#feedback_form")[0].reset();
+        $("#feedback_form input[type='submit']").removeAttr("disabled");
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_error").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "none");
+        $("#help_wrapper").css("display", "block");
+        $("#help-modal").attr("aria-hidden", "false");
+        $("#help-modal .close-modal").click(onModalClose);
+        $("#lean_overlay").click(onModalClose);
+        $("#help_wrapper .close-modal").focus();
+    });
+    showFeedback = function(event, issue_type, title, subject_label, details_label) {
+        $("#help_wrapper").css("display", "none");
+        $("#feedback_form input[name='issue_type']").val(issue_type);
+        $("#feedback_form_wrapper").css("display", "block");
+        $("#feedback_form_wrapper header").html("<h2>" + title + "</h2><hr>");
+        $("#feedback_form_wrapper label[data-field='subject']").html(subject_label);
+        $("#feedback_form_wrapper label[data-field='details']").html(details_label);
+        $("#feedback_form_wrapper .close-modal").focus();
+        event.preventDefault();
+    };
+    cycle_modal_tab("#feedback_link_question", "#help_wrapper .close-modal");
+    cycle_modal_tab("#feedback_submit", "#feedback_form_wrapper .close-modal");
+    cycle_modal_tab("#feedback-faq-link", "#feedback_success_wrapper .close-modal");
+    $("#help-modal").on("keydown", function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 27) {
+            e.preventDefault();
+            $("#help_wrapper .close-modal").click();
+        }
+    });
+    $("#feedback_link_problem").click(function(event) {
+        showFeedback(
+            event,
+            "problem",
+            "Report a Problem",
+            "Brief description of the problem" + "*",
+            "Details of the problem you are encountering" + "*" + "<span class='tip'>" +
+              "Include error messages, steps which lead to the issue, etc." + "</span>"
+        );
+    });
+    $("#feedback_link_suggestion").click(function(event) {
+        showFeedback(
+            event,
+            "suggestion",
+            "Make a Suggestion",
+            "Brief description of your suggestion" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_link_question").click(function(event) {
+        showFeedback(
+            event,
+            "question",
+            "Ask a Question",
+            "Brief summary of your question" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_form").submit(function() {
+        $("input[type='submit']", this).attr("disabled", "disabled");
+        $('area,input,select,textarea,button').attr('tabindex', -1);
+        $("#feedback_form_wrapper .close-modal").focus();
+    });
+    $("#feedback_form").on("ajax:complete", function() {
+        $("input[type='submit']", this).removeAttr("disabled");
+    });
+    $("#feedback_form").on("ajax:success", function(event, data, status, xhr) {
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "block");
+        $("#feedback_success_wrapper").focus();
+    });
+    $("#feedback_form").on("ajax:error", function(event, xhr, status, error) {
+        $(".field-error").removeClass("field-error").removeAttr("aria-invalid");
+        var responseData;
+        try {
+            responseData = jQuery.parseJSON(xhr.responseText);
+        } catch(err) {
+        }
+        if (responseData) {
+            $("[data-field='"+responseData.field+"']").addClass("field-error").attr("aria-invalid", "true");
+            $("#feedback_error").html(responseData.error).stop().css("display", "block");
+        } else {
+            // If no data (or malformed data) is returned, a server error occurred
+            htmlStr = "An error has occurred.";
+            htmlStr += " " + _.template(
+              "Please {link_start}send us e-mail{link_end}.",
+              {link_start: '<a href="#" id="feedback_email">', link_end: '</a>'},
+              {interpolate: /\{(.+?)\}/g})
+            $("#feedback_error").html(htmlStr).stop().css("display", "block");
+            $("#feedback_email").click(function(e) {
+                mailto = "mailto:" + "bugs@edx.org" +
+                    "?subject=" + $("#feedback_form input[name='subject']").val() +
+                    "&body=" + $("#feedback_form textarea[name='details']").val();
+                window.open(mailto);
+                e.preventDefault();
+            });
+        }
+        // Make change explicit to assistive technology
+        $("#feedback_error").focus();
+    });
+})(this)
+</script>
+
+
+
+
+    <div class="content-wrapper" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="static_tab_a24b7341216346f2a5c99c6391f64229 wrapper-course-material" aria-label="Course Material">
+  <div class="course-material">
+    <ol class="course-tabs">
+        
+          <li>
+             <a href="/courses/course-v1:UBCx+SPD1x+1T2016/courseware" class="">
+                 Courseware
+             </a>
+          </li>
+        
+          <li>
+             <a href="/courses/course-v1:UBCx+SPD1x+1T2016/info" class="">
+                 Course Info
+             </a>
+          </li>
+        
+          <li>
+             <a href="/courses/course-v1:UBCx+SPD1x+1T2016/77860a93562d40bda45e452ea064998b/" class="">
+                 Design Recipes
+             </a>
+          </li>
+        
+          <li>
+             <a href="/courses/course-v1:UBCx+SPD1x+1T2016/a24b7341216346f2a5c99c6391f64229/" class="active">
+                 Language
+                   <span class="sr">, current location</span>
+             </a>
+          </li>
+        
+          <li>
+             <a href="/courses/course-v1:UBCx+SPD1x+1T2016/fefe3e39d3564db8a767c39187141f07/" class="">
+                 Problem Bank
+             </a>
+          </li>
+        
+          <li>
+             <a href="/courses/course-v1:UBCx+SPD1x+1T2016/d192723b104b4c8093aa0c0fc117e97f/" class="">
+                 Glossary
+             </a>
+          </li>
+        
+          <li>
+             <a href="/courses/course-v1:UBCx+SPD1x+1T2016/86a7af433b134f0a952b5614f5ad9a78/" class="">
+                 Style Rules
+             </a>
+          </li>
+        
+          <li>
+             <a href="/courses/course-v1:UBCx+SPD1x+1T2016/discussion/forum" class="">
+                 Discussion
+             </a>
+          </li>
+        
+          <li>
+             <a href="/courses/course-v1:UBCx+SPD1x+1T2016/progress" class="">
+                 Progress
+             </a>
+          </li>
+      
+    </ol>
+  </div>
+</nav>
+
+
+
+<section class="container">
+  <div class="static_tab_wrapper">
+    <div class="xblock xblock-student_view xblock-student_view-static_tab xmodule_display xmodule_StaticTabModule" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="static_tab" data-request-token="66556b26b62911e5b3b20a7fd891e37d" data-runtime-version="1" data-usage-id="block-v1:UBCx+SPD1x+1T2016+type@static_tab+block@a24b7341216346f2a5c99c6391f64229" data-type="HTMLModule" data-course-id="course-v1:UBCx+SPD1x+1T2016">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "HTMLModule"}
+  </script>
+  <h2>Language</h2>
+<p>This page provides a summary of the programming language used in this course: Beginning Student Language in part 1, then progressing to Intermediate and Advanced) later in the course.</p>
+<p></p>
+<h3>Values&nbsp;</h3>
+<table cellpadding="5" style="padding: 5px; text-align: left; horizontal-align: left; vertical-align: top;">
+<tbody>
+<tr>
+<td>Numbers:</td>
+<td><tt>1, 3.5, 1/2, #i1.4142135623730951, ...</tt></td>
+</tr>
+<tr>
+<td>Strings:</td>
+<td><tt>"Marvolo", "Black", "carrot", ...</tt></td>
+</tr>
+<tr>
+<td>Images:</td>
+<td><img src="https://spark-public.s3.amazonaws.com/programdesign/image_files/green-triangle.png" />, <img src="https://spark-public.s3.amazonaws.com/programdesign/image_files/red-square.png" />,...</td>
+</tr>
+<tr>
+<td>Booleans:</td>
+<td><tt>true, false</tt></td>
+</tr>
+<tr>
+<td>Compound data:</td>
+<td><tt>(make-person "Claude" "Monet"), ...</tt></td>
+</tr>
+<tr>
+<td>Lists:</td>
+<td><tt>empty, (cons 2 (cons 1 empty)), (cons "x" (cons "y" (cons "z" empty))), ...</tt></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>NOTE: The primitive types are: <tt> Number, Integer, Natural </tt>(Integers greater than or equal to 0)<tt>, String, Image and Boolean<br /><span face="Helvetica Neue, Helvetica, Arial, sans-serif" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2htdp/image also provides a primitive Color type</span></tt></p>
+<h3>Primitive Operations</h3>
+<p><tt>+, -, *, / ...<br /> string-append, string-length, substring ...<br /> circle, square, overlay, above, beside...<br />not, =, &lt;, &gt;, string=?, string&lt;?, cons, first, rest, empty?, cons?</tt></p>
+<h3>Forming Expressions</h3>
+<p></p>
+<table border="1" cellpadding="5" style="border: .5px solid #000000; padding: 5px; text-align: left; horizontal-align: left; vertical-align: top;">
+<thead>
+<tr><th scope="col" width="60%">Form</th><th scope="col">Example</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><tt>&lt;value&gt;</tt></td>
+<td><tt>3</tt></td>
+</tr>
+<tr>
+<td><tt>&lt;name-of-defined-constant&gt;</tt></td>
+<td><tt>WIDTH</tt></td>
+</tr>
+<tr>
+<td><tt>(&lt;name-of-primitive-operation&gt; &lt;expression&gt; ...)</tt></td>
+<td><tt>(+ 2 (* 3 6))</tt></td>
+</tr>
+<tr>
+<td><tt>(&lt;name-of-defined-function&gt; &lt;expression&gt; ...)</tt> <br /> <br />A function call should have the same number of operands as parameters.</td>
+<td><tt>(yell "hello")</tt></td>
+</tr>
+<tr>
+<td><tt>(if&nbsp;&lt;question&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&lt;true-answer&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&lt;false-answer&gt;)</tt> <br /> <br /><tt>&lt;question&gt;</tt> must be an expression that evaluates to a boolean. <br /><tt>&lt;true-answer&gt;</tt> and <tt>&lt;false-answer&gt;</tt> must be expressions.</td>
+<td><tt>(if (&gt; (string-length x) 3)<br /> &nbsp;&nbsp;&nbsp;&nbsp;"long"<br /> &nbsp;&nbsp;&nbsp;&nbsp;"short")</tt></td>
+</tr>
+<tr>
+<td><tt>(cond [&lt;question&gt; &lt;answer&gt;]<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...)</tt> <br /> <br />Each <tt>&lt;question&gt;</tt> must be either <tt>else</tt> or an expression that evaluates to a boolean. <br />Each <tt>&lt;answer&gt;</tt> must be an expression.</td>
+<td><tt>(cond [(&gt; x y) "more"]<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(&lt; x y) "less"]<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[else "same"])<tt> </tt></tt></td>
+</tr>
+<tr>
+<td><tt>(and &lt;question&gt;&nbsp;...)</tt> <br /> <br />Each <tt>&lt;question&gt;</tt> must be an expression that evaluates to a boolean.</td>
+<td><tt>(and (&lt; 0 x) (&gt;= x 10))</tt></td>
+</tr>
+<tr>
+<td><tt>(or &lt;question&gt;&nbsp;...)</tt> <br /> <br />Each <tt>&lt;question&gt;</tt> must be an expression that evaluates to a boolean.</td>
+<td><tt>(or (&lt; x 0) (&gt; x 10))</tt></td>
+</tr>
+<tr>
+<td><tt><i>Intermediate Student Language</i><br /><br />(local [&lt;definition&gt;...] <br />&nbsp;&nbsp;&lt;expression&gt;)</tt> <br /> <br />Any function or constant defined within the <tt>local</tt> is valid within the entire body of the local expression, but not outside of the local expression.&nbsp;</td>
+<td><tt><br />(local [(define DOT&nbsp;(circle 5 "solid" "red"))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(define (add-dot img)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (beside img DOT))]&nbsp;<br />&nbsp;&nbsp;(add-dot (square 20 "solid" "blue")))<br /><br /></tt></td></tr>
+  
+ <tr><td><tt><i>Intermediate Student Language</i><br /><br />(shared [(&lt;variable-name&gt; &lt;expression&gt;)...] <br />&nbsp;&nbsp;&lt;expression&gt;)</tt> <br /> <br />Shared is a special version of local that makes it possible to build circular structure. Any variable defined within the shared is valid within the entire body of the shared expression, but not outside of the shared expression. By convention the variable names that are used in circular references are given names of the form -1- -2- etc. But this is just a convention, any variable name can be used.</td>
+<td><tt><br />(shared [(-1- (list -2-))<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(-2- (list -1-))]<br />&nbsp;&nbsp;-1-)<br /><br /></tt></td>
+  
+</tr>
+</tbody>
+</table>
+<p></p>
+<h3>Forming Definitions</h3>
+<pre>(define SIZE (* 3 6))         ;a constant definition, the value of SIZE is 18
+</pre>
+<pre>(define (bulb c)              ;defines a function named bulb, with parameter c
+  (circle 30 "solid" c))      ;this is the body of the function
+</pre>
+<pre>(define-struct wand (wood core length))  ;defines the functions below:
+
+; constructor: make-wand
+; selectors:   wand-wood, wand-core, wand-length
+; predicate:   wand?
+</pre>
+<p></p>
+<h3>Evaluation Rules</h3>
+<p>For a <strong>constant reference</strong>, such as <tt>SIZE</tt>:</p>
+<ul>
+<li>The constant reference evaluates to the defined value of the constant.</li>
+</ul>
+<p>For a <strong>call to a primitive</strong> such as <tt>(+ 2 (* 3 6))</tt>:</p>
+<ul>
+<li>First reduce the operands to values: proceed left to right making sure all the operands are values, for any that are not, evaluate them. <br />These values are called the arguments to the primitive.</li>
+<li>Apply the primitive to those arguments.</li>
+</ul>
+<p>For a <strong>call to a defined function</strong> such as <tt>(bulb (string-append "r" "ed"))</tt>:</p>
+<ul>
+<li>First reduce the operands to values (as for a call to a primitive). These values are called the arguments to the function.</li>
+<li>Replace the function call expression with the body of the function in which every occurrence of the parameter(s) has been replaced by the corresponding argument(s).</li>
+</ul>
+<p>For example:</p>
+<pre>(bulb (string-append "r" "ed"))
+(bulb "red")
+(circle 30 "solid" "red")
+</pre>
+<p>For an <strong>if expression</strong>:</p>
+<ul>
+<li>If the question is not a value, evaluate it and replace it with its value.</li>
+<li>If the question is <tt>true</tt>, replace the entire if expression with the true answer expression.</li>
+<li>If the question is <tt>false</tt>, replace the entire if expression with the false answer expression</li>
+<li>If the question is a value other than <tt>true</tt> or <tt>false</tt>, signal an error</li>
+</ul>
+<p>For example:</p>
+<pre>(if (&gt; (+ 1 2) 3)     
+    (* 2 3)          
+    (* 3 4))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;since (&gt; (+ 1 2) 3) is an expression, not a value,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;evaluate it left to right
+(if (&gt; 3 3)
+    (* 2 3)
+    (* 3 4))       
+
+(if false     
+    (* 2 3) 
+    (* 3 4))           
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;replace entire if expression with the false answer expression
+(* 3 4)    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;evaluate false answer expression 
+12
+</pre>
+<p></p>
+<p>For a <strong>cond expression</strong>:</p>
+<ul>
+<li>If there are no question/answer pairs, signal an error.</li>
+<li>If the first question is not a value, evaluate it and replace it with its value. That is, replace the entire <tt>cond</tt> with a new <tt>cond</tt> in which the first question has been replaced by its value.</li>
+<li>If the first question is <tt>true</tt> or <tt>else</tt>, replace the entire <tt>cond</tt> expression with the first answer.</li>
+<li>If the first question is <tt>false</tt> drop the first question/answer pair; that is, replace the <tt>cond</tt> with a new <tt>cond</tt> that does not have the first question/answer pair</li>
+  <li>Since the first question is a value other than <tt>else</tt>,&nbsp;<tt>true</tt> or <tt>false</tt>, signal an error. </li>
+</ul>
+<p>For example:</p>
+<pre>(cond [(&gt; 3 3) "more"]     
+      [(&lt; 3 3) "less"]     
+      [else "same"]) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;the first question is not a value, the expression
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;(&gt; 3 3) is evaluated and replaced with a value
+(cond [false "more"]        
+      [(&lt; 3 3) "less"]                            
+      [else "same"])     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;the first question is false, so the first
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;question/answer pair is dropped &nbsp;
+(cond [(&lt; 3 3) "less"]     
+      [else "same"])       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;the first question is not a value, so (&lt; 3 3) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;is evaluated and replaced with its value
+(cond [false "less"]       
+      [else "same"])       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;the first question is false, so the first
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;question/answer pair is dropped 
+(cond [else "same"])       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;since the question is else, the entire cond expression            
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;is replaced by the answer               
+"same"</pre>
+<p>For an <strong>and expression</strong>:</p>
+<ul>
+<li>If there are no expressions produce <tt>true</tt>.</li>
+<li>If the first expression is not a value, evaluate it and replace it with its value.</li>
+<li>If the first expression is <tt>false</tt> produce <tt>false</tt></li>
+<li>If the first expression is <tt>true</tt> replace the entire <tt>and</tt> expression with an <tt>and</tt> expression without the first expression.</li>
+<li>If the first expression is a value other than <tt>true</tt> or <tt>false</tt>, signal an error.</li>
+</ul>
+<p>For example:</p>
+<pre>(and (&lt; 0 3) 
+     (&lt; 3 10))  &nbsp;&nbsp;;since (&lt; 0 3) is an expression, not a value,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;evaluate it
+(and true        
+     (&lt; 3 10))    ;first expression is true, drop it from the and    
+
+(and (&lt; 3 10))    ;now evaluate (&lt; 3 10)       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(and true)        ;now drop true
+
+(and)             ;an empty and produces true
+</pre>
+<p>For an&nbsp;<strong>or expression</strong>:</p>
+<ul>
+<li>If there are no expressions produce&nbsp;<tt>false</tt>.</li>
+<li>If the first expression is not a value, evaluate it and replace it with its value.</li>
+<li>If the first expression is&nbsp;<tt>true</tt>&nbsp;produce&nbsp;<tt>true</tt></li>
+<li>If the first expression is&nbsp;<tt>false</tt>&nbsp;replace the entire&nbsp;<tt>or</tt>&nbsp;expression with an&nbsp;<tt>or</tt>&nbsp;expression without the first expression.</li>
+<li>If the first expression is a value other than&nbsp;<tt>true</tt>&nbsp;or&nbsp;<tt>false</tt>, signal an error.</li>
+</ul>
+<p>For example:</p>
+<pre>(or (&lt; 14 0)
+    (&gt; 14 10))  &nbsp;&nbsp;;since (&lt; 14 0) is an expression, not a value,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;evaluate it
+(or false        
+    (&gt; 14 10))    ;first expression is false, drop it from the and    
+
+(or (&gt; 14 10))    ;now evaluate (&gt; 14 10)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(or true)         ;first expression is true so produce true
+
+true</pre>
+<p><br /> <br /><i>Intermediate Student Language</i></p>
+<p>For a <strong>local expression</strong>:</p>
+<ul>
+<li>For each locally defined function or constant, rename it and all references to it to a globally unique name, and</li>
+<li><strong>in the same step</strong> lift the local definition(s) to the top level with any existing global definitions, and</li>
+<li><strong>in the same step</strong> replace the local expression with the body of the local in which all references to the defined functions and constants have been renamed.</li>
+</ul>
+<p>For example:</p>
+<pre>(define b 1)
+(+ b
+   (local [(define b 2)]
+     (* b b))
+   b)
+                        ;b evaluates to its defined value, 1
+
+
+(define b 1)
+(+ 1
+   (local [(define b 2)]
+     (* b b))
+   b)
+                        ; since b is a locally-defined constant,
+                        ;it is renamed to a globally unique name b_0
+                        ;the local definition of b_0 is lifted to
+                        ;the top level and the entire local expression
+                        ;is replaced by its body
+
+(define b 1)
+(define b_0 2)          ;---this renamed define was lifted
+
+(+ 1
+  (* b_0 b_0)           ;---entire local replaced by renamed body
+  b)
+
+                        ;evaluation continues normally from this point
+</pre>
+
+<p>For a <strong>shared expression</strong>:</p>
+
+<p>The evaluation of shared is truly one of the deep mysteries of the
+universe. There are two very different ways to describe the evaluation
+rules.</p>
+
+<p>One cannot be described exactly in terms of BSL (or ISL), but
+informally goes as follows:</p>
+
+<ul>
+
+  <li>Each of the variables is defined as a constant with a special
+    unique dummy value.</li>
+
+  <li>Then the expressions are evaluated.</li>
+
+  <li>Then each of the constants has its value change to the
+    corresponding value. This is the part we have no words for in BSL
+    or ISL, it is called mutation.</li>
+
+  <li>Finally each of those values is traversed and each time one
+    of the dummy values appears it is replaced in-situ by the
+    corresponding value. (A different form of mutation.)
+
+</ul>
+
+<p>This evaluation rule for shared is cumbersome but goes beyond what we know.</p>
+
+<p>The other evaluation rule is truly profound, see <a href="http://www.dreamsongs.com/Files/WhyOfY.pdf">The Why of Y</a> for an explanation.</p>
+
+<!-- <p>For <strong>lambda</strong> expressions:</p> -->
+<p></p>
+<h3>Built-In Abstract Functions</h3>
+<p>ISL and ASL have the following built-in abstract functions.</p>
+<pre>;; Natural (Natural -&gt; X) -&gt; (listof X)
+;; produces (list (f 0) ... (f (- n 1)))
+(define (build-list n f) ...)
+
+;; (X -&gt; boolean) (listof X) -&gt; (listof X)
+;; produce a list from all those items on lox for which p holds
+(define (filter p lox) ...)
+
+;; (X -&gt; Y) (listof X) -&gt; (listof Y)
+;; produce a list by applying f to each item on lox
+;; that is, (map f (list x-1 ... x-n)) = (list (f x-1) ... (f x-n))
+(define (map f lox) ...)
+
+;; (X -&gt; boolean) (listof X) -&gt; boolean
+;; produce true if p produces true for every element of lox
+(define (andmap p lox) ...)
+
+;; (X -&gt; boolean) (listof X) -&gt; boolean
+;; produce true if p produces true for some element of lox
+(define (ormap p lox) ...)
+
+;; (X Y -&gt; Y) Y (listof X) -&gt; Y
+;; (foldr f base (list x-1 ... x-n)) = (f x-1 ... (f x-n base))
+(define (foldr f base lox) ...)
+
+;; (X Y -&gt; Y) Y (listof X) -&gt; Y
+;; (foldl f base (list x-1 ... x-n)) = (f x-n ... (f x-1 base))
+(define (foldl f base lox) ...)
+</pre>
+<p></p>
+</div>
+
+  </div>
+</section>
+
+      
+    </div>
+
+        
+
+
+
+  
+
+
+
+<footer id="footer-edx-v3" role="contentinfo" aria-label="Page Footer"
+>
+    <h2 class="sr footer-about-title">About edX</h2>
+    <div class="footer-content-wrapper">
+      <div class="footer-logo">
+          <img alt="edX logo" src="https://d37djvu3ytnwxt.cloudfront.net/static/images/edx-theme/edx-header-logo.517a627deaad.png">
+      </div>
+
+      <div class="site-details">
+          <nav class="site-nav" aria-label="About edX">
+              <a href="https://www.edx.org/about-us">About</a>
+              <a href="https://www.edx.org/blog">Blog</a>
+              <a href="https://www.edx.org/news-announcements">News</a>
+              <a href="https://support.edx.org">Help Center</a>
+              <a href="https://www.edx.org/contact">Contact</a>
+              <a href="https://www.edx.org/careers">Careers</a>
+              <a href="https://www.edx.org/donate">Donate</a>
+              <a href="https://www.edx.org/sitemap">Sitemap</a>
+          </nav>
+          <nav class="legal-notices" aria-label="Legal">
+              <a href="https://www.edx.org/edx-terms-service">Terms of Service & Honor Code</a>
+              <a href="https://www.edx.org/edx-privacy-policy">Privacy Policy</a>
+              <a href="https://www.edx.org/accessibility">Accessibility Policy</a>
+          </nav>
+          <p class="copyright">© edX Inc.  All rights reserved except where noted.  EdX, Open edX and the edX and Open EdX logos are registered trademarks or trademarks of edX Inc.</p>
+
+          <div class="openedx-link">
+            <a href="http://open.edx.org" title="Powered by Open edX">
+              <img alt="Powered by Open edX" src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png" width="140">
+            </a>
+          </div>
+      </div>
+
+      <div class="external-links">
+        <div class="social-media-links">
+          <a href="http://www.facebook.com/EdxOnline" class="sm-link external" title="Facebook" rel="noreferrer">
+            <span class="icon fa fa-facebook-square" aria-hidden="true"></span>
+            <span class="sr">Like edX on Facebook</span>
+          </a>
+          <a href="https://twitter.com/edXOnline" class="sm-link external" title="Twitter" rel="noreferrer">
+            <span class="icon fa fa-twitter" aria-hidden="true"></span>
+            <span class="sr">Follow edX on Twitter</span>
+          </a>
+          <a href="https://www.youtube.com/user/edxonline?sub_confirmation=1" class="sm-link external" title="Youtube" rel="noreferrer">
+            <span class="icon fa fa-youtube" aria-hidden="true"></span>
+            <span class="sr">Subscribe to the edX YouTube channel</span>
+          </a>
+          <a href="http://www.linkedin.com/company/edx" class="sm-link external" title="LinkedIn" rel="noreferrer">
+            <span class="icon fa fa-linkedin-square" aria-hidden="true"></span>
+            <span class="sr">Follow edX on LinkedIn</span>
+          </a>
+          <a href="https://plus.google.com/+edXOnline" class="sm-link external" title="Google+" rel="noreferrer">
+            <span class="icon fa fa-google-plus-square" aria-hidden="true"></span>
+            <span class="sr">Follow edX on Google+</span>
+          </a>
+          <a href="http://www.reddit.com/r/edx" class="sm-link external" title="Reddit" rel="noreferrer">
+            <span class="icon fa fa-reddit" aria-hidden="true"></span>
+            <span class="sr">Subscribe to the edX subreddit</span>
+          </a>
+        </div>
+
+        <div class="mobile-app-links">
+          <a href="https://itunes.apple.com/us/app/edx/id945480667?mt=8" class="app-link external">
+            <img alt="Download the edX mobile app from the Apple App Store" src="https://d37djvu3ytnwxt.cloudfront.net/static/images/app/app_store_badge_135x40.d0558d910630.svg">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=org.edx.mobile" class="app-link external">
+            <img alt="Download the edX mobile app from Google Play" src="https://d37djvu3ytnwxt.cloudfront.net/static/images/app/google_play_badge_45.c02590f4a6f1.png">
+          </a>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+
+
+  </div>
+
+  
+      <!-- begin segment footer -->
+    <script type="text/javascript">
+        $(window).load(function() {
+            analytics.identify("9328924", {
+              email: "lifenhanceorg@gmail.com",
+              username: "lifenhanceorg"
+            });
+        });
+    </script>
+    <!-- end segment footer -->
+
+  <script type="text/javascript" src="https://d37djvu3ytnwxt.cloudfront.net/static/js/vendor/noreferrer.aa62a3e70ffa.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://d37djvu3ytnwxt.cloudfront.net/static/js/utils/navigation.17df676f9045.js" charset="utf-8"></script>
+  
+</body>
+</html>
+
+
+
+<!-- Performance beacon for onload times -->
+<script>
+  (function () {
+    var sample_rate = 0.05;
+    var roll = Math.floor(Math.random() * 100)/100;
+    var onloadBeaconSent = false;
+
+    if(roll < sample_rate){
+      $(window).load(function() {
+        setTimeout(function(){
+          var t = window.performance.timing;
+
+          var data = {
+            event: "onload",
+            value: t.loadEventEnd - t.navigationStart,
+            page: window.location.href,
+          };
+
+          if (!onloadBeaconSent) {
+            $.ajax({method: "POST", url: "/performance", data: data});
+          }
+          onloadBeaconSent = true;
+        }, 0);
+      });
+    }
+  }());
+</script>

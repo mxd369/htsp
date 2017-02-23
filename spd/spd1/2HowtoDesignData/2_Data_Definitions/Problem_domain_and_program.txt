@@ -1,0 +1,12 @@
+Problem Domain:                          Program:
+
+information    ->    represents    ->    data
+information    <-    interprets    <-    data
+a light is red                           0
+
+
+0 = red
+1 = yellow
+2 = green
+
+Data Definitions will describe how we are representing informationa as data

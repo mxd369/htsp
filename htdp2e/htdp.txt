@@ -1,0 +1,14 @@
+Resource
+http://www.htdp.org/
+
+http://www.ccs.neu.edu/home/matthias/HtDP2e/
+find me in htdp
+
+Design concepts draw on:
+Michael A. Jackson’s method for creating COBOL programs,
+Daniel P. Friedman on recursion,
+Robert Harper on type theory,
+Daniel Jackson on software design.
+
+“Systematic program design”:
+process that takes a complete novice from a problem statement to a well-organized solution in a step-by-step fashion

@@ -1,0 +1,11 @@
+Failures:
+
+  Failed HtDD_L5
+
+  Did not Attempt HtDD L8
+
+Evaulation:
+  More difficult than HtDF
+
+Recommendation:
+  Keep going onto next part, but practice the basics repeatedly

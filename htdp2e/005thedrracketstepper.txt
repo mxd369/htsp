@@ -1,0 +1,9 @@
+An overview of DrRacket's Stepper tool
+
+How the expression changes as it is being evaluated
+
+How the expression is evaluated step by step
+
+If there is a problem with the program andyou can't figure out the reason even from reasoning the stepper tool is handy to look through the design of the program and where something unexpected is happening
+
+How the function gets evaluated step by step until we get a final value

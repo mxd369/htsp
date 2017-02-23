@@ -1,0 +1,70 @@
+====================DESIGN RECIPE
+
+;; Contract: program_or_function_name : data_type -> data_type
+
+;; Purpose: to take that and give back this
+
+;; Example: (program_or_function_name parameter parameter ...) "should produce" output
+
+;; Definition: [refines the header]
+(define (program_or_function_name parameter parameter ...)
+  (... body of the program_or_function_name))
+
+;; Tests:
+(program_or_function_name parameter parameter)
+;; expected value/output
+...
+
+====================Simplification
+
+Understanding the Program's Purpose:
+  ...
+Program Examples:
+  ...
+
+The Body:
+  ...
+Testing:
+  ...
+
+====================Tabular Form of the Recipe
+
+  PHASE
+
+  *PHASE: Contract Purpose and Header*
+  
+    *GOAL: name the function, specify its clases of input data and its class of output data; to describe its purpose; to forumlate a header
+	
+	  *Activity: choose a name that fits the problem.
+	             study the problem for clues on how many unknown ``givens" the function consumes
+				 pick one variable per input; if possible, use names that are mentioned for the ``givens" in the problem statement.
+				 describe what the function should produce using the chosen variable names.
+				 forumlate the contract and header:
+				   ;;name: number ...->number
+				   ;;to compute ... from x1 ...
+				   (define(name x1 ...) ...)
+  
+  *PHASE: Examples*
+
+    *GOAL: to characterize the input-output relationship via examples
+	
+	  *Activity: search the problem statement for examples.
+	             work through the examples.
+				 validate the results, if possible.
+				 make up examples.
+  
+  *PHASE: Body*
+  
+    *GOAL: to define the function
+	
+	  *Activity: formulate how the function computes its result.
+	             develop a Scheme expression that uses Scheme's primitive operations, other functions, and the variables.
+				 translate the mathematical expressions in the problem statement, when available
+
+  *PHASE: Test*
+  
+    *GOAL: to discover mistakes (``typos" and logic)
+	
+	  *Activity: apply the function to the inputs of the examples.
+	             check that the outputs are as predicted.
+

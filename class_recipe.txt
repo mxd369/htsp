@@ -1,0 +1,17 @@
+Simple Class Design Recipe
+
+1 What does the class do?
+2 create a class file
+3 create a test file
+4 create the object in the test file
+5 start writing the class file
+	public:
+		class definition
+		constructor for the class
+		set function(s)
+		get function(s)
+	private:
+		
+6: compile, did it compile? fix errors
+7: run, 	did it run? 	fix errors
+8: test, 	output correct? fix code

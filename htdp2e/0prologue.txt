@@ -1,0 +1,6 @@
+/* . represents an image */
+(place-image . 50 0 (empty-scene 100 100))
+(place-image . 50 10 (empty-scene 100 100))
+(place-image . 50 20 (empty-scene 100 100))
+(place-image . 50 30 (empty-scene 100 100))
+(place-image . 50 40 (empty-scene 100 100))

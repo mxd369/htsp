@@ -1,0 +1,134 @@
+GREGOR KICZALES: Here's another How to Design Functions problem.
+And, again, it elaborates on the problem we saw before.
+What I'm going to do in this problem is when I start out,
+I'm not going to choose the best signature.
+And then we'll fix it later.
+And the reason I'm doing that is I want to illustrate to you that the
+How to Design Functions recipe is not intended to be
+what's called a waterfall process.
+It's not intended to be something that you do the first step and then
+the second step and then the third step and absolutely get each step right.
+It happens pretty often that you go through the recipe
+and you get to the third or fourth step and maybe you realize;
+oh, the signature's not exactly right.
+And you go back and fix it.
+And sometimes what even happens is you skip a first step
+to go to a later step just to get started.
+A common example is you're not quite sure about the signature
+so you go write some examples and then you come back and do the signature.
+Now, what I don't want to do is give you carte blanche
+to jump immediately to the function definition and do that;
+that's not going to be what we're going to call systematic design.
+But I also don't want you to feel like; gee, I just
+don't know what the signature is but I'm not allowed
+to do anything else until I write it.
+There is some flexibility in following the steps of the process.
+It's a structured process, but it's not a locked-in waterfall process.
+==============image-area-starter
+========V0
+
+#|
+PROBLEM:
+
+DESIGN a function called image-area that consumes an image and produces the 
+area of that image. For the area it is sufficient to just multiple the image's 
+width by its height.  Follow the HtDF recipe and leave behind commented 
+out versions of the stub and template.
+|#
+
+;; Image -> Number
+;; produce image's width * height (area)
+(check-expect (image-area (rectangle 2 3 "solid" "red")) (* 2 3))
+
+define (image-area img) 0)
+
+========V0 Test
+rectangle: this function is not defined
+========V1
+(require 2htdp/image)
+
+#|
+PROBLEM:
+
+DESIGN a function called image-area that consumes an image and produces the 
+area of that image. For the area it is sufficient to just multiple the image's 
+width by its height.  Follow the HtDF recipe and leave behind commented 
+out versions of the stub and template.
+|#
+
+;; Image -> Number
+;; produce image's witdth * height (area)
+(check-expect (image-area (rectangle 2 3 "solid" "red")) (* 2 3))
+
+define (image-area img) 0)
+
+========V1 test
+fails but running therefore well formed
+
+========V2
+(require 2htdp/image)
+
+#|
+PROBLEM:
+
+DESIGN a function called image-area that consumes an image and produces the 
+area of that image. For the area it is sufficient to just multiple the image's 
+width by its height.  Follow the HtDF recipe and leave behind commented 
+out versions of the stub and template.
+|#
+
+;; Image -> Number
+;; produce image's witdth * height (area)
+(check-expect (image-area (rectangle 2 3 "solid" "red")) (* 2 3))
+
+;define (image-area img) 0) ;stub
+
+;(define (image-area img)   ;template
+;  (... img))
+
+(define (image-area img)
+  (* (image-width img) (image-height img)))
+  
+========V2 Test
+The test Passed!
+========Realization
+In this course, we use the term natural number to mean 0, 1, 2, 3 etc (the non-negative integers)
+
+But now we might realize this interesting thing,
+which is that images are always sized in pixels.
+And pixels are always a natural number; 0, 1, 2, 3, 4, 5, something like that.
+You can't have 3.2 pixels, that's not how pixels are.
+So if the width is always going to be a natural
+and the height is always going to be a natural and you multiply those two,
+this actually could be natural instead of number.
+
+========V2
+
+(require 2htdp/image)
+
+#|
+PROBLEM:
+
+DESIGN a function called image-area that consumes an image and produces the 
+area of that image. For the area it is sufficient to just multiple the image's 
+width by its height.  Follow the HtDF recipe and leave behind commented 
+out versions of the stub and template.
+|#
+
+;; Image -> Natural
+;; produce image's witdth * height (area)
+(check-expect (image-area (rectangle 2 3 "solid" "red")) (* 2 3))
+
+;define (image-area img) 0) ;stub
+
+;(define (image-area img)   ;template
+;  (... img))
+
+(define (image-area img)
+  (* (image-width img) (image-height img)))
+
+========V2
+========V2
+========V2
+========V2
+========V2

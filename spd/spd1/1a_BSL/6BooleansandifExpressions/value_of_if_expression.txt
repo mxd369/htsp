@@ -1,0 +1,10 @@
+What is the value of the if expresion below?
+
+(if (> (string-length "hello") 10)
+    "long"
+	"short")
+
+"short" <tt>"short"</tt> - correct
+EXPLANATION
+
+The question in the if expression is not a value, so we evaluate it and replace it with false. Since the question is false, we replace the entire if expression with the false-answer expression, which is just the value "short".

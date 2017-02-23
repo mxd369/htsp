@@ -1,0 +1,35 @@
+http://www.ccs.neu.edu/home/matthias/HtDP2e/part_preface.html
+
+
+exploration, experimentation, and self-evaluation
+
+Each step requires analysis, precision, description, focus on and attention to specific details
+
+Iterative Refinement addresses the problem of designing complex programs. When a program addresses many concerns and consists of many functions, getting everything right at once is nearly impossible. In response, this book introduces the design concept of iterative refinement, which calls for creating complete programs in discrete layers. Its inner core is the essence of the desired functionality; additional refinement steps improve the functionality of the core and add additional functionality.
+
+================================================Problem set/solution location
+
+
+working through these problem sets and reading from 2e
+http://www.ccs.neu.edu/home/matthias/HtDP2e/part_one.html#%28part._ch~3ahtdp%29
+
+
+Working through these problem sets from 1e
+http://htdp.org/2003-09-26/Book/curriculum-Z-H-5.html#node_thm_2.1.1
+preface
+http://htdp.org/2003-09-26/Book/curriculum-Z-H-2.html
+contents
+http://htdp.org/2003-09-26/Book/curriculum-Z-H-1.html
+cover
+http://htdp.org/2003-09-26/Book/curriculum.html
+
+HtDP Problem Set: Index:
+http://www.htdp.org/2003-09-26/Problems/
+
+
+================================================Bookmark
+bookmark for 1e:
+http://htdp.org/2003-09-26/Book/curriculum-Z-H-5.html
+
+bookmark for 2e:
+http://www.ccs.neu.edu/home/matthias/HtDP2e/part_one.html

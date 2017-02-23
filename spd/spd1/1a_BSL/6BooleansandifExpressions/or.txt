@@ -1,0 +1,33 @@
+What is the value of the expression below?
+(or (< 2 1)
+    (< 3 2)
+	(< 4 4))
+true
+EXPLANATION
+
+According to the help desk, an or expression: (or <expr1> <expr2> …) evaluates to true as soon as one <exprn> evaluates to true.
+====================
+Which comparisons are performed when the expression below is evaluated?
+(or (< 2 1)
+    (> 3 2)
+	(= 4 4))
+
+The < and the > The < and the > - correct
+EXPLANATION
+
+The help desk also explains that as soon as an expression produces true, in this case the expression is (> 3 2), other expressions to the right of it are not evaluated and or immediately produces true.
+====================
+Given:
+(define B1 true)
+(define B2 false)
+
+What is the value of the expression below?
+(or (not B1) B2)
+
+false
+
+EXPLANATION
+(not B1) is false. (or false false) is false.
+====================
+
+====================

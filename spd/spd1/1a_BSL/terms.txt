@@ -1,0 +1,23 @@
+argument: An argument is a value that passed to a function or a primitive operation when it is called. The arguments are the values that result from evaluating the operands in the function or primitive call. See parameter for a discussion of the differences between operands, arguments and parameters.
+
+comment: In BSL, all the text on a line after a ; is a comment. It is ignored by BSL, and is intended to communicate to human readers something important about the program.
+
+Constant: A constant is named value defined using define. It is called a constant because once it is defined it never changes.
+
+evaluate: An expression is an element of a program that is evaluated to produce a value
+
+expression: An expression is an element of a program that is evaluated to produce a value. See the Language page for the detailed rules for forming an expression.
+
+image: Image is a primitive type of data that represents image, such as the result of a built in image function or a copy-pasted picture.
+
+number: Number is a primitive type of data that represents any number, including 0, fractions, decimal numbers and inexact numbers. For example, 1, -5, 3.4, 134.9853957 and #i1.4142135623730951 are all Numbers.
+
+operand: The expressions following the function name in a function call expression (or the operator name in a primitive call expression) are called operands.
+
+operator: Primitive operators are provided by the BSL language to operate on primitive data. They include  +, -, string-append, substring, image-width and many others.
+
+primitive: A primitive is a basic building block provided by BSL that we use when we design our programs. BSL provides primitive data and primitive operations on data.
+
+string: A String is a kind of primitive data that consists of symbols “strung” together. Strings are always enclosed in double quotation marks “like this”. It is important to note that if numbers are written inside strings, they are strings not numbers. “123” does not have the value of one hundred twenty three, since it is a String, whereas 123 does have the value of one hundred twenty three, since it is a Number.
+
+value: A value is a data element, such as 1, "foo", (make-cat 10 20) etc.

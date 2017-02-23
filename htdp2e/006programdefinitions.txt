@@ -1,0 +1,21 @@
+Writing a simple, but complete, program in Racket
+
+(define (total-nuggets purchased-nuggests))
+  (+ 3 purchased-nuggests))
+
+/*
+> (+ 3 1)
+4
+> (+ 3 2)
+5
+> (+ 3 5)
+8
+*/
+
+> (total-nuggets 1)
+4
+> (total-nuggests 2)
+5
+> (total-nuggests 5)
+8
+>

@@ -1,0 +1,33 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname Arithmetic_of_images) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
+(require 2htdp/image)
+
+(circle 10 "solid" "red")
+(rectangle 10 20 "solid" "blue")
+(star 12 "solid" "green")
+
+(regular-polygon 50 3 "outline" "red")
+(regular-polygon 40 4 "outline" "blue")
+(regular-polygon 20 5 "solid" "red")
+(regular-polygon 20 6 "solid" "red")
+(regular-polygon 20 7 "solid" "red")
+(regular-polygon 20 8 "solid" "red")
+(regular-polygon 20 9 "solid" "red")
+(regular-polygon 20 10 "solid" "red")
+(regular-polygon 20 11 "solid" "red")
+(regular-polygon 20 12 "solid" "red")
+(regular-polygon 20 13 "solid" "red")
+(regular-polygon 20 14 "solid" "red")
+(regular-polygon 20 15 "solid" "red")
+(regular-polygon 20 16 "solid" "red")
+(regular-polygon 20 17 "solid" "red")
+(regular-polygon 20 18 "solid" "red")
+(regular-polygon 20 19 "solid" "red")
+(regular-polygon 20 20 "solid" "red")
+
+(pulled-regular-polygon 60 4 1/3 30 "solid" "blue")
+(pulled-regular-polygon 50 5 1/2 -10 "solid" "red")
+(pulled-regular-polygon 50 5 1 140 "solid" "purple")
+(pulled-regular-polygon 50 5 1.1 140 "solid" "purple")
+(pulled-regular-polygon 100 3 1.8 30 "solid" "blue")

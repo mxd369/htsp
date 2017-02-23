@@ -1,0 +1,9 @@
+Failures:
+  Failed HtDF_P8
+  DidNotFinish HtDF_P9 completely
+
+Evaulation:
+  My functions are not simple enough
+
+Recommendation:
+  Keep going onto next part, but practice the basics repeatedly

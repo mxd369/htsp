@@ -1,0 +1,85 @@
+========Failed test
+
+;; Number -> Number
+;; given length of one side of square, produce the area of the square
+(check-expect (area 3) 3)
+(check-expect (area 3.2) (* 3.2 3.2))
+
+;(define (area s) 0) ;stub
+
+;template
+#|
+(define (area s)
+  (... s))
+|#
+
+(define (area s)
+  (* s s))
+  
+
+
+
+
+
+
+
+Ran 2 tests.
+1 of the 2 tests failed.
+
+No signature violations.
+
+Check failures:
+	Actual value 9 differs from 3, the expected value.
+in area-starter.rkt, line 8, column 0 
+
+
+
+
+Remember, if a test fails (a check-expect fails), it could be that:
+ - the function definition is wrong
+ - the test is wrong
+ - they are both wrong
+
+Check the test before fixing the function definition!
+
+========fix 
+
+;; Number -> Number
+;; given length of one side of square, produce the area of the square
+(check-expect (area 3) 9)
+(check-expect (area 3.2) (* 3.2 3.2))
+
+;(define (area s) 0) ;stub
+
+;template
+#|
+(define (area s)
+  (... s))
+|#
+
+(define (area s)
+  (* s s))
+========Note
+Sometimes you copy part of the template
+in week2 we will start to see more elaborate template where you will also sometimes delete part of the template.
+
+The template is a list of the parts you have to work with. You don't have to use them all, you may use some of them more than once.
+========Question 1
+Why do we run the examples/tests after writing the stub?
+
+To check if they are well-formed
+
+EXPLANATION
+
+The stub helps us make sure the tests are well-formed. Running the tests when we have the stub finds errors like unbalanced parentheses or string quotes, calls to non-existent functions and other violations of the well-formedness rules. But we should not expect all the tests to pass since the stub is returning the same result every time it is called. Similarly we should not expect that our stub is "correct" if all our tests do happen to pass.
+========Question 2
+When a test fails, what possibilities should we consider? (Select all that apply.)
+
+the test is incorrect
+the function definition is incorrect
+the test and the function definition are both incorrect
+
+
+EXPLANATION
+
+When a test fails our first thought is likely to be that the function definition is incorrect. But if the function definition looks correct we should consider the possibility that the test itself is incorrect and carefully check the test against the signature and purpose. In some cases both the test and function definition may be incorrect! If you suspect that you want to carefully walk through the entire design checking it.

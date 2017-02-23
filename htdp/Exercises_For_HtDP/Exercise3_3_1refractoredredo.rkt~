@@ -1,0 +1,16 @@
+;;; instead of multiplying values together, separate out
+
+;; for example ...
+;; miles->feet : number -> number
+;; to determine the number of feet in some number of miles
+(define (miles->feet miles)
+  (yards->feet 
+   (rods->yards
+    (furlongs->rods
+     (miles->furlongs 
+      miles)))))
+	  
+;; CONSTANTS
+;; careful planning here
+
+;; EXAMPLES AS TESTS

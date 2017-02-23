@@ -1,0 +1,67 @@
+#
+Description
+Length
+Difficulty
+Code Files
+Requires
+Lecture
+
+
+BSL P1
+Write more arithmetic expressions.
+5 min.
+easy
+more-arithmetic-expression-starter.rkt
+more-arithmetic-expression-solution.rkt
+exprs
+
+BSL P2
+Write out the step-by-step evaluation of expressions involving calls to primitives.
+8 min.
+medium
+evaluation-prims-starter.rkt
+evaluation-prims-solution.rkt
+eval
+
+BSL P3
+Create an image using image composition primitives.	5 min.	easy	tile-starter.rkt
+tile-solution.rkt	strs-imgs
+
+BSL P4	Write expressions to operate on strings using primitives.	8 min.	medium	glue-starter.rkt
+glue-solution.rkt	strs-imgs
+
+BSL P5	Write expressions to operate on booleans using primitives.	7 min.	easy	compare-images-starter.rkt
+compare-images-solution.rkt	bools-if-exprs
+
+BSL P6	Step by step evaluation of a call to a function that calls a number primitive in its body.	7 min.	easy	more-foo-evaluation-starter.rkt
+more-foo-evaluation-solution.rkt	stepper
+
+BSL P7	Step by step evaluation of a call to a function that calls a string primitive in its body.	7 min.	easy	even-more-foo-evaluation-starter.rkt
+even-more-foo-evaluation-solution.rkt	stepper
+
+BSL P8	Write expression to produce background image of Canadian flag.	5 min.	easy	cflag-starter.rkt
+cflag-solution.rkt	strs-imgs
+
+BSL P9	Write even more arithmetic expressions.	5 min.	easy	even-more-arithmetic-expression-starter.rkt
+even-more-arithmetic-expression-solution.rkt	exprs
+
+BSL P10	Write an expression that operates on images using image primitives.	5 min.	easy	triangle-starter.rkt
+triangle-solution.rkt	strs-imgs
+
+BSL P11	Step by step evaluation of a call to a function that has an if expression in its body.	7 min.	easy	bobble-evaluation-starter.rkt
+bobble-evaluation-solution.rkt	stepper
+
+BSL P12	Fix the error(s) in a call to an image primitive.	5 min.	easy	debug-rectangle-starter.rkt
+debug-rectangle-solution.rkt	strs-imgs
+
+BSL P13	Write an arithmetic expression.	5 min.	easy	arithmetic-expression-starter.rkt
+arithmetic-expression-solution.rkt	exprs
+
+BSL P14	Write an expression that operates on images using image primitives.	10 min.	easy	overlay-starter.rkt
+overlay-solution.rkt	strs-imgs
+
+BSL P15	Write a function that produces the larger of two given numbers.	5 min.	easy	function-writing-starter.rkt
+function-writing-solution.rkt	fun-def
+
+BSL P16	Step by step evaluation of a call to a function that has an if expression in its body.	15 min.	medium	foo-evaluation-starter.rkt
+foo-evaluation-solution.rkt	stepper

@@ -1,0 +1,9 @@
+Expression:
+(* (- 4 2) 3)
+Operators:
+*
+-
+
+EXPLANATION
+
+* is the operator in the primitive call (* (- 4 2) 3), and - is the operator in the primitive call (- 4 2).

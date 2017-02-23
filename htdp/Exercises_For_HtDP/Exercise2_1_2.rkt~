@@ -1,0 +1,5 @@
+#|
+
+Exercise 2.1.2.   Evaluate (sqrt 4), (sqrt 2), and (sqrt -1) in DrScheme. Then, find out whether DrScheme knows an operation for determining the tangent of an angle.
+
+|#

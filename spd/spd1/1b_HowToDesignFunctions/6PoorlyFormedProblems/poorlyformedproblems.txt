@@ -1,0 +1,217 @@
+============tall-starter
+============v0
+(require 2htdp/image)
+
+;; Image -> Boolean
+;; produce true if the image is tall
+
+;; tests
+(check-expect (tall? (rectangle 2 3 "solid" "red")) true)
+; how many tests does this function need?
+
+
+#|
+When designing functions which produce a boolean, the purpose specifies how to interpret the output
+|#
+
+; stub
+
+#|
+invent the name of the function,
+have a name that ends in question mark (a convention)
+|#
+
+(define (tall? img) false)
+
+============How many tests?
+The issue of how many tests a function needs is something we will discuss in more and more detail as the course moves forwards.
+
+_____________________________________________________________________________
+
+Take a moment to think about how many tests are necessary for the function in the previous video?
+
+2
+
+answer: 3
+============v1
+
+(require 2htdp/image)
+
+;; Image -> Boolean
+;; produce true if the image is tall
+
+;; tests
+(check-expect (tall? (rectangle 2 3 "solid" "red")) true)
+; how many tests does this function need?
+
+#|
+When designing functions which produce a boolean, the purpose specifies how to interpret the output
+|#
+
+; stub
+#|
+invent the name of the function,
+have a name that ends in question mark (a convention)
+|#
+(define (tall? img) false)
+
+; template
+;(define (tall? img)
+;  (... img))
+
+#| template with if
+(define (tall? img)
+  (if (... img)
+      (... img)
+      (... img)))
+|#
+
+(define (tall? img)
+  (if (> (image-height img) (image-width img))
+      true
+      false))
+
+
+
+
+==========v1 test
+
+(require 2htdp/image)
+
+;; Image -> Boolean
+;; produce true if the image is tall
+
+;; tests
+(check-expect (tall? (rectangle 2 3 "solid" "red")) true)
+; how many tests does this function need?
+
+#|
+When designing functions which produce a boolean, the purpose specifies how to interpret the output
+|#
+
+; stub
+#|
+invent the name of the function,
+have a name that ends in question mark (a convention)
+|#
+;(define (tall? img) false)
+
+; template
+;(define (tall? img)
+;  (... img))
+
+#| template with if
+(define (tall? img)
+  (if (... img)
+      (... img)
+      (... img)))
+|#
+
+(define (tall? img)
+  (if (> (image-height img) (image-width img))
+      true
+      false))
+===========V2
+
+(require 2htdp/image)
+
+;; Image -> Boolean
+;; produce true if the image is tall
+
+;; tests
+(check-expect (tall? (rectangle 2 3 "solid" "red")) true)
+(check-expect (tall? (rectangle 3 2 "solid" "red")) false)
+; how many tests does this function need?
+
+#|
+When designing functions which produce a boolean, the purpose specifies how to interpret the output
+|#
+
+; stub
+#|
+invent the name of the function,
+have a name that ends in question mark (a convention)
+|#
+;(define (tall? img) false)
+
+; template
+;(define (tall? img)
+;  (... img))
+
+#| template with if
+(define (tall? img)
+  (if (... img)
+      (... img)
+      (... img)))
+|#
+
+(define (tall? img)
+  (if (> (image-height img) (image-width img))
+      true
+      false))
+
+==========add the third case and fix the purpose
+(require 2htdp/image)
+
+;; Image -> Boolean
+;; produce true if the image is tall (height is greater than width)
+
+;; tests
+(check-expect (tall? (rectangle 2 3 "solid" "red")) true)
+(check-expect (tall? (rectangle 3 2 "solid" "red")) false)
+(check-expect (tall? (rectangle 3 3 "solid" "red")) false)
+
+; how many tests does this function need?
+
+#|
+When designing functions which produce a boolean, the purpose specifies how to interpret the output
+|#
+
+; stub
+#|
+invent the name of the function,
+have a name that ends in question mark (a convention)
+|#
+;(define (tall? img) false)
+
+; template
+;(define (tall? img)
+;  (... img))
+
+#| template with if
+(define (tall? img)
+  (if (... img)
+      (... img)
+      (... img)))
+|#
+
+(define (tall? img)
+  (if (> (image-height img) (image-width img))
+      true
+      false))
+=============Realize
+
+realize partway through the design process
+that there's a boundary condition, or sometimes we call it a corner case,
+that you hadn't quite thought of.
+It's perfectly fine for that to happen, but when it happens,
+when you say to yourself, "Wait a minute, what if the width and height
+are the same?"
+You need to immediately do a couple things.
+First, write an example for it.
+Then decide what the behavior is.
+And I'm going to decide in this case that if your width and height are
+the same, you're not tall.
+So write the example, write the expected result, fix the purpose.
+Height is greater than width, so that it's unambiguous in the purpose.
+And if what you decided required you to change the function,
+change the function.
+In this case, it didn't, but if I had decided this the other way,
+I would have to change that to a greater than or equal.
+And now I'll run the tests again.
+Now all three tests are passing.
+=============Test
+All 3 tests passed!
+=============Modify
+(define (tall? img)
+  (> (image-height img) (image-wdith img)))

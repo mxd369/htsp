@@ -1,0 +1,7 @@
+Signature: A signature is the first line written in a function design. It is a comment that specifies the types of arguments that the function will consume, as well as what type of data the function produces. 
+
+Purpose: A purpose is a comment that is written when a function is designed that explains in words what the function is supposed to produce. Try to keep purposes below 78 characters, but be specific!
+
+Stub: A stub is a mock-version of a function that specifies the function's proper name and parameter(s), but where the body of the function is simply a value of the proper return type. See the HtD Functions page for more information on stubs.
+
+Template: A template describes the basic structure or backbone of the function independent of its details. Data driven templates are based on the type of data the function consumes. Other kinds of templates are based on knowing something about the basic structure of the computation the function will perform. The idea of the template is to let us write down quickly what we know about the function definition "before we get to the details".

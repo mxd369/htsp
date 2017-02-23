@@ -1,0 +1,26 @@
+value of expression?
+
+(substring "hello" 1 3)
+
+"el"
+
+EXPLANATION
+
+Remember strings use zero-based indexing. The first number represents the character to start at. In this case, 1. The second number represents the character to go up to but not including. As shown below, 1 is the the 'e', and 3 is the second 'l'. Since substring starts at 'e' and goes up to but not include the second 'l' the answer is "el".
+
+"01234"
+"hello"
+
+
+
+Will the following produce any errors?
+
+(string-append "1" "2")
+
+No
+
+EXPLANATION
+
+"1" and "2" are both strings, so the expression above will not produce any errors. Just because inside the "" looks like a number doesn't mean that "1" is a number. It is a string. 1 is a number.
+
+Don't hesitate to try different things like this in DrRacket in case you have similar questions. If you get an error, just read the error message and try to fix it.

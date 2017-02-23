@@ -1,0 +1,233 @@
+========A First HtDF Problem
+HtDF design recipe for a given design problem.
+
+problem: Design a function that pluralizes a given word.
+(Pluralize means to convert the word to its plural form.)
+For simplicity you may assume that just adding s is enought to pluralize a word
+========Signature
+
+Problem: Design a function that pluralizes a given word. (Pluralize means to convert the word to its plural form.) For simplicity you may assume that just adding s is enough to pluralize a word.
+
+What is an appropriate signature for this function? Leave out the two semi-colons and the space, but otherwise be sure to get the capitalization and all other aspects of the signature correct.
+
+string -> string
+answer: String -> String
+
+========Purpose
+
+
+Problem: Design a function that pluralizes a given word. (Pluralize means to convert the word to its plural form.) For simplicity you may assume that just adding s is enough to pluralize a word.
+Continuing with the given problem, we now have a signature.
+
+;; String -> String 
+
+best statement?
+
+;; Produce the given string with "s" added to the end.
+
+A purpose statement should describe what result is produced and how that is based on the argument(s). Makes it clear exactly what is produced from the given string.
+
+========Stub
+
+#| Stub is a function definition that:
+ - has correct function name
+ - has correct number of parameters
+ - produces dummy result of correct type
+
+Problem: Design a function that pluralizes a given word. (Pluralize means to convert the word to its plural form.) For simplicity you may assume that just adding s is enough to pluralize a word.
+
+Continuing with the given problem, we now have a signature and a purpose.
+
+;; String -> String
+;; Produce the given string with "s" added to the end.
+
+Which of the following stubs is best?
+
+(define (pluralize str) "") 
+^correct
+
+EXPLANATION
+
+A stub must have the correct function name, the correct number of parameters, and produce a value of the correct type. As part of writing the stub we end up deciding on a good name for the function. The name should say what the function produces when it is called, not necessarily how it does that internally.
+
+correct name and correct type
+
+
+========Examples/checks-expects
+
+Problem: Design a function that pluralizes a given word. (Pluralize means to convert the word to its plural form.) For simplicity you may assume that just adding s is enough to pluralize a word.
+
+Continuing with the given problem, we now have a signature, purpose and stub.
+
+;; String -> String
+;; Produce the given string with "s" added to the end.
+  
+(define (pluralize str) "")  ;stub
+
+
+Which of the following check-expects is appropriate? (Check all that apply.)
+
+(check-expect (pluralize "dog") "dogs")
+(check-expect (pluralize "grass") "grasss")
+^correct
+
+The third test is correct. So is the fourth, since adding "s" to "grass" should produce "grasss". Which just goes to show that this is not a very good pluralize function! But that's OK for now. The design method at least has made that clear to us.
+========Code the Body
+
+we now have a signature, purpose, stub and several examples. Below we have also given you the template.
+
+;; String -> String 
+;; add "s" to the end of the given string
+(check-expect (pluralize "cat") "cats")
+(check-expect (pluralize "dogs") "dogss")
+
+;(define (pluralize str) "")        ; stub
+;(define (pluralize str)            ; template
+;  (... str))
+
+(define (pluralize str)             ; template
+  (... str))
+
+
+We now need to code the body by replacing (... str) with the proper body. Which of the following expressions should be used as the body for pluralize?
+
+(string-append str "s")
+
+========Example - yell!
+
+#signature, purpose, stub
+;; String -> String
+;; add "!" to the end of s
+(check-expect (yell "hello") "hello!")
+(check-expect (yell "bye") "bye!")
+
+;(define (yell s) "")   ;stub
+
+;(define (yell s)       ;template
+;  (... s))
+
+(define (yell s)
+  (string-append s "!"))
+
+========when to run check-expect
+;; yell-starter.rkt
+
+; 
+; PROBLEM:
+; 
+; DESIGN a function called yell that consumes strings like "hello" 
+; and adds "!" to produce strings like "hello!".
+; 
+; Remember, when we say DESIGN, we mean follow the recipe.
+; 
+; Leave behind commented out versions of the stub and template.
+; 
+
+
+;; String -> String
+;; add "!" to the end of s
+(check-expect (yell "hello") "hello!")
+(check-expect (yell "bye") "bye!")
+
+;(define (yell s) "") ; stub
+(define (yell s) "")
+
+
+
+
+
+Ran 2 tests.
+0 tests passed.
+No signature violations.
+
+Check failures:
+	Actual value "" differs from "hello!", the expected value.
+in yell-starter.rkt, line 8, column 0 
+	Actual value "" differs from "bye!", the expected value.
+in yell-starter.rkt, line 9, column 0 
+
+========Inventory - template & constants
+
+;; String -> String
+;; add "!" to the end of s
+(check-expect (yell "hello") "hello!")
+(check-expect (yell "bye") "bye!")
+
+;(define (yell s) "") ;stub
+;(define (yell s)     ;template
+;  (... s))
+
+(define (yell s)
+  (string-append s "!"))
+
+========Body, Test and Debug
+
+;; String -> String
+;; add "!" to the end of s
+(check-expect (yell "hello") "hello!")
+(check-expect (yell "bye") "bye!")
+
+;(define (yell s) "") ;stub
+;(define (yell s)     ;template
+;  (... s))
+
+(define (yell s)
+  (string-append s "!"))
+
+
+Both tests passed!
+========Debug
+Sometimes a program we design doesn't work properly. The program might get an error or a test might fail. One useful skill in trying to find the problem is to scan over the design elements looking for inconsistencies. Does the purpose match the signature? Do the tests match the signature and purpose? Does the stub match what comes before it? Does the function header match the signature and purpose? Does the function body match the signature, purpose and tests?
+
+Often times looking for an inconsistency between different parts of these is enough to find the bug and make it clear what needs to be fixed. 
+
+The questions on this page are intended to help you begin to learn this skill.
+========Question 1
+
+;; Image -> String
+;; produce the aspect ratio (width/height) of an image
+(check-expect (aspect-ratio (rectangle 20 30 "solid" "blue")) (/ 2 3))
+(check-expect (aspect-ratio (square 10 "solid" "blue")) 1)
+(check-expect (aspect-ratio (rectangle 20 30 "solid" "blue")) 3/2)
+
+;(define (aspect-ratio img) 0) ;stub
+
+
+EXPLANATION
+
+;; Image -> String  (**** at String)
+The signature shows the function as producing String. But this doesn't match the purpose, the check-expects or the stub, all of which have the function producing Number.
+========Question 2
+
+;; String -> Boolean
+;; produce true if string length is 0
+(check-expect (empty-string? "") true)
+(check-expect (empty-string? 0) false)      ;*****
+(check-expect (empty-string? "abc") false)
+
+;(define (empty-string? s) true) ;stub
+(define (empty-string? s)
+  (zero? (string-length s)))
+
+
+EXPLANATION
+
+In the second check-expect, the operand in the call to empty-string? is 0. But 0 is a number, the signature says the function must consume String, and all the other parts of the design have the function consuming String.
+========Question 3
+
+;; String -> String
+;; duplicate a string (add a space and the string itself); "" produces ""
+(check-expect (repeat "hello") "hello hello")
+(check-expect (repeat "") "")
+
+;(define (repeat s) "") ;stub
+
+(define (repeat s)
+  (if (string=? s "")
+    ""
+    true))   ;*****
+
+
+EXPLANATION
+The false answer in the if expression produces true. But true is a boolean, which does not match the signature, purpose or any of the check-expects.
+
