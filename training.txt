@@ -1,0 +1,29 @@
+Non-linear, Circular, applicable from the beginning:
+
+Increasing in Complexity
+
+Intro:
+
+Thought, Philosophy
+
+Mathematics, Engineering, Science
+
+Brass tacks and Data
+
+
+
+Software development
+
+System
+Assembler, linker, loader, pipes, sockets, and system analysis methods used in systems environment. 
+
+
+Intelligence
+
+
+Practice
+
+Need
+
+
+Reuse
