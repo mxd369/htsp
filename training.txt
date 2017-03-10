@@ -10,8 +10,6 @@ Mathematics, Engineering, Science
 
 Brass tacks and Data
 
-
-
 Software development
 
 System
@@ -20,10 +18,30 @@ Assembler, linker, loader, pipes, sockets, and system analysis methods used in s
 
 Intelligence
 
-
 Practice
 
 Need
-
+Solution
 
 Reuse
+
+The Problem and the Solution
+the Evolution
+The Evolutionary Path
+What is next
+What was before
+
+
+Front End
+Mobile
+Game
+Back-end
+Application
+Data Science
+QA / Test
+Algorithms
+Embedded
+OS
+DEV-OPS
+Full Stack
+Language - Compiler
