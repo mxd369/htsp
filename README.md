@@ -37,7 +37,7 @@ Test More & Finalize<br />
 
 -----
 
-STEP 0-1 : Conceptulaize, general understanding<br />
+STEP 0-1 : Conceptualize, general understanding<br />
 STEP 1-2 : Code write start, what is input to output<br />
 STEP 2-3 : Organize code, specifics (vars, logic, constructs)<br />
 STEP 3-4 : Structure code, improve<br />
